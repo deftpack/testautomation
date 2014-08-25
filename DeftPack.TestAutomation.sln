@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Functional", "DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj", "{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium", "DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj", "{38731F5C-8555-4CFB-886C-0E103B67CE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "DeftPack.TestAutomation.FunctionalTestExample\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting", "DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj", "{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation", "DeftPack.TestAutomation\DeftPack.TestAutomation.csproj", "{CE59C824-C745-4681-9700-809EAEB97D99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{84CFB332-1C4A-4FF5-AC31-10E7827BC4AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38731F5C-8555-4CFB-886C-0E103B67CE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38731F5C-8555-4CFB-886C-0E103B67CE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38731F5C-8555-4CFB-886C-0E103B67CE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38731F5C-8555-4CFB-886C-0E103B67CE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF34D149-D04F-4646-85B2-B56EE5DC8B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF34D149-D04F-4646-85B2-B56EE5DC8B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF34D149-D04F-4646-85B2-B56EE5DC8B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF34D149-D04F-4646-85B2-B56EE5DC8B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE59C824-C745-4681-9700-809EAEB97D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE59C824-C745-4681-9700-809EAEB97D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE59C824-C745-4681-9700-809EAEB97D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE59C824-C745-4681-9700-809EAEB97D99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF34D149-D04F-4646-85B2-B56EE5DC8B83} = {84CFB332-1C4A-4FF5-AC31-10E7827BC4AE}
+	EndGlobalSection
+EndGlobal

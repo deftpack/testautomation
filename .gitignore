@@ -1,0 +1,6 @@
+*\bin
+*\obj
+*\packages
+*.dll
+*.pdb
+*.suo

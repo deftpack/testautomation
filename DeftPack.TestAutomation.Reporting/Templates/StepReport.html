@@ -1,0 +1,11 @@
+﻿@{
+    var statusName = @Model.StepStatus ? "passed" : "failed";
+}
+
+<tr class="test-step-@statusName">
+    <td class="step-sum-col-num">@Model.StepNumber</td>
+    <td class="step-sum-col-name">@Model.StepName</td>
+    <td class="step-sum-col-exp">@Model.ExpectedResult</td>
+    <td class="step-sum-col-act">@Model.ActualResult</td>
+    <td class="step-sum-col-status"><span class="status-text">@statusName</span></td>
+</tr>

@@ -1,0 +1,38 @@
+﻿<html>
+    <head>
+        <title>@Model.Title</title>
+        <link rel="stylesheet" type="text/css" href="Content/report_theme.css" />
+    </head>
+    <body>
+        <h1>@Model.Title</h1>
+        <h2><span id="execution-date">@Model.ExecutionDate</span></h2>
+        <table id="test-summaries">
+            <thead>
+                <tr>
+                    <td class="test-sum-col-num">#</td>
+                    <td class="test-sum-col-name">Name</td>
+                    <td class="test-sum-col-desc">Description</td>
+                    <td class="test-sum-col-status">Status</td>
+                </tr>
+            </thead>
+            <tbody>@Raw(Model.TestSummaries)</tbody>
+        </table>
+        <table id="test-suite-summary">
+            <thead>
+                <tr><td colspan="8">Summary</td></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="test-suite-summary-label">Total</td>
+                    <td class="test-suite-summary-value">@(Model.PassCount + Model.FailCount)</td>
+                    <td class="test-suite-summary-label">Passed</td>
+                    <td class="test-suite-summary-value">@Model.PassCount</td>
+                    <td class="test-suite-summary-label">Failed</td>
+                    <td class="test-suite-summary-value">@Model.FailCount</td>
+                    <td class="test-suite-summary-label">Execution Time</td>
+                    <td class="test-suite-summary-value">@Model.TimeSpent.ToString("hh\\:mm\\:ss")</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
