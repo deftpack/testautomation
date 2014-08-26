@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.Selenium.PageElements
+﻿namespace DeftPack.TestAutomation.Selenium.HtmlElements
 {
     public interface IElementSelector
     {

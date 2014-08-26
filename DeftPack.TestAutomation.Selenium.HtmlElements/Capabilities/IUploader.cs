@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.Selenium.PageElements.Capabilities
+﻿namespace DeftPack.TestAutomation.Selenium.HtmlElements.Capabilities
 {
     public interface IUploader : IElement
     {
