@@ -1,10 +1,10 @@
 ﻿using Autofac;
+using DeftPack.TestAutomation.Functional.DependencyInjection;
 using DeftPack.TestAutomation.Functional.Evaluation;
 using DeftPack.TestAutomation.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System.Reflection;
-using ITestAction = DeftPack.TestAutomation.Functional.Evaluation.ITestAction;
 
 namespace DeftPack.TestAutomation.Functional.Framework
 {
@@ -68,7 +68,7 @@ namespace DeftPack.TestAutomation.Functional.Framework
             return TestFramework.Container.Resolve<WebDriverFactory>().Default;
         }
 
-        protected void Evaluate<TAction>(params object[] parameters) where TAction : ITestAction
+        protected void Evaluate<TAction>(params object[] parameters) where TAction : TestAction
         {
             var action = _scope.Resolve<TestActionFactory>().Create<TAction>(parameters);
             Evaluator.Evaluate(action);

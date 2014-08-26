@@ -50,8 +50,9 @@ namespace DeftPack.TestAutomation.Selenium.Extensions
             {
                 var wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(Timeout));
                 wait.Until(element => element.FindElement(By.XPath(objectXPath)));
+                
             }
-            catch (WebDriverTimeoutException wdte)
+            catch
             {
                 return true;
             }

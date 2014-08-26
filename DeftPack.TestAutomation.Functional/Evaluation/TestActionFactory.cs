@@ -14,7 +14,7 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             _webDriver = webDriver;
         }
 
-        public TAction Create<TAction>(params object[] parameters) where TAction : ITestAction
+        public TAction Create<TAction>(params object[] parameters) where TAction : TestAction
         {
             var pageTypes = GetPageTypesForAction<TAction>();
             var pages = pageTypes.Select(t => Activator.CreateInstance(t, _webDriver));

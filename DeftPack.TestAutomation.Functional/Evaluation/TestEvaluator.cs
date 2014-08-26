@@ -12,7 +12,7 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             _testReporter = testReporter;
         }
 
-        public ITestEvaluator Evaluate<T>(T evaluable) where T : ITestAction
+        public ITestEvaluator Evaluate<T>(T evaluable) where T : TestAction
         {
             bool isSuccess = false;
 

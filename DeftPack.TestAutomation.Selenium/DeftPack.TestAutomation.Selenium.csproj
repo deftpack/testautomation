@@ -35,16 +35,26 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="WebDriver">
+    <Reference Include="WebDriver, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.WebDriver.2.42.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support">
+    <Reference Include="WebDriver.Support, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.Support.2.42.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Browser.cs" />
     <Compile Include="Extensions\TextNotFoundException.cs" />
+    <Compile Include="PageElements\Capabilities\IClickable.cs" />
+    <Compile Include="PageElements\Capabilities\IContainer.cs" />
+    <Compile Include="PageElements\Capabilities\IEditable.cs" />
+    <Compile Include="PageElements\IElement.cs" />
+    <Compile Include="PageElements\IElementSelector.cs" />
+    <Compile Include="PageElements\Capabilities\ISelectable.cs" />
+    <Compile Include="PageElements\Capabilities\ITextual.cs" />
+    <Compile Include="PageElements\Capabilities\IUploader.cs" />
     <Compile Include="WebDriverConfiguration.cs" />
     <Compile Include="Extensions\WebDriverExtensions.cs" />
     <Compile Include="WebDriverFactory.cs" />

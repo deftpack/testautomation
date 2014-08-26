@@ -37,6 +37,9 @@
     <Reference Include="FluentAutomation.Core">
       <HintPath>..\packages\FluentAutomation.Core.3.0.0.0\lib\net40\FluentAutomation.Core.dll</HintPath>
     </Reference>
+    <Reference Include="FluentAutomation.SeleniumWebDriver">
+      <HintPath>..\packages\FluentAutomation.SeleniumWebDriver.3.0.0.0\lib\net40\FluentAutomation.SeleniumWebDriver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -65,12 +68,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInjection\FluentAutomationModule.cs" />
+    <Compile Include="DependencyInjection\ReportingModule.cs" />
     <Compile Include="Evaluation\TestActionFactory.cs" />
     <Compile Include="Framework\AutomationTestSuite.cs" />
     <Compile Include="Page.cs" />
-    <Compile Include="Framework\TestFramework.cs" />
+    <Compile Include="DependencyInjection\TestFramework.cs" />
     <Compile Include="PageNotLoadedException.cs" />
-    <Compile Include="Evaluation\ITestAction.cs" />
+    <Compile Include="Evaluation\TestAction.cs" />
     <Compile Include="Evaluation\ITestEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Evaluation\TestActionDescriptionAttribute.cs" />

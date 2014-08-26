@@ -6,13 +6,14 @@ namespace DeftPack.TestAutomation.Functional
 {
     public class TestScreenshotSaver : ITestScreenshotSaver
     {
+        public static string ScreenshotFolderName = "Screenshots";
         private readonly IWebDriver _webDriver;
         private readonly string _screenShotLocation;
 
         public TestScreenshotSaver(IWebDriver webDriver, string rootLocation)
         {
             _webDriver = webDriver;
-            _screenShotLocation = Path.Combine(rootLocation, "Screenshots");
+            _screenShotLocation = Path.Combine(rootLocation, ScreenshotFolderName);
 
             if (!Directory.Exists(_screenShotLocation))
             {
