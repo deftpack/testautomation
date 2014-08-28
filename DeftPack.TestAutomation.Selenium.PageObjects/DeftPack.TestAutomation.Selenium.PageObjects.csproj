@@ -33,6 +33,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LambdaToXpath">
+      <HintPath>..\packages\LambdaToXpath.1.1\lib\LambdaToXpath.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="WebDriver">
@@ -76,12 +79,14 @@
     <Compile Include="IElement.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="PageNotLoadedException.cs" />
+    <Compile Include="Selectors\Builders\Comparison.cs" />
+    <Compile Include="Selectors\Builders\SelectorBuilder.cs" />
     <Compile Include="Selectors\ISelector.cs" />
     <Compile Include="MetaInformation\InputTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\ISelectorBuilder.cs" />
-    <Compile Include="Selectors\SelectorBuilder.cs" />
+    <Compile Include="Selectors\Builders\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
+    <Compile Include="StringExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

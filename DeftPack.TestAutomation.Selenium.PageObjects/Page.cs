@@ -1,4 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Selectors;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.Selectors.Builders;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
