@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{84CFB332-1C4A-4FF5-AC31-10E7827BC4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.HtmlElements", "DeftPack.TestAutomation.Selenium.HtmlElements\DeftPack.TestAutomation.Selenium.HtmlElements.csproj", "{F4A3E8FB-765A-4117-A55A-8B980961447D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects", "DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj", "{F4A3E8FB-765A-4117-A55A-8B980961447D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
