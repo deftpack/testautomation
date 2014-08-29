@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors.Builders
+﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
 {
     public interface ISelectorBuilder
     {

@@ -1,38 +1,38 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Selectors.Builders;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
+using DeftPack.TestAutomation.Selenium.PageObjects.Selectors;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects
 {
     public abstract class Page
     {
         private readonly IWebDriver _webDriver;
+        private readonly SelectorBuilderFactory _selectorBuilderFactory;
+        private readonly ElementFactory _elementFactory;
 
         protected Page(IWebDriver webDriver)
         {
             _webDriver = webDriver;
+            _webDriver.InitilaizejQuery();
+            _elementFactory = new ElementFactory();
+            _selectorBuilderFactory = new SelectorBuilderFactory();
         }
 
-        protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc)
-        {
-            throw new System.NotImplementedException();
+        protected ISelectorBuilder Any {
+            get { return SelectorBuilder.Any; }
         }
 
-        protected IEnumerable<TElement> QueryElements<TElement>(Func<ISelectorBuilder> builderFunc)
+        protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
         {
-            throw new System.NotImplementedException();
+            return _elementFactory.Create<TElement>(_webDriver, builderFunc().Selector);
         }
 
-
-        protected TElement QueryElement<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc)
+        protected TElement QueryElement<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc) where TElement : Element
         {
-            throw new System.NotImplementedException();
-        }
-
-        protected IEnumerable<TElement> QueryElements<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc)
-        {
-            throw new System.NotImplementedException();
+            var selector = string.Join(", ",_selectorBuilderFactory.Create<TElement>(builderFunc).Select(x => x.Selector));
+            return _elementFactory.Create<TElement>(_webDriver, selector);
         }
     }
 }

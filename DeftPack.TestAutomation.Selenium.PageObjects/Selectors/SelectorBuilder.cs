@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors.Builders
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
 {
     public class SelectorBuilder : ISelectorBuilder
     {

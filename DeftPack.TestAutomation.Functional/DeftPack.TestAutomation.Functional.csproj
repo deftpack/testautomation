@@ -72,9 +72,7 @@
     <Compile Include="DependencyInjection\ReportingModule.cs" />
     <Compile Include="Evaluation\TestActionFactory.cs" />
     <Compile Include="Framework\AutomationTestSuite.cs" />
-    <Compile Include="Page.cs" />
     <Compile Include="DependencyInjection\TestFramework.cs" />
-    <Compile Include="PageNotLoadedException.cs" />
     <Compile Include="Evaluation\TestAction.cs" />
     <Compile Include="Evaluation\ITestEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +88,10 @@
     <ProjectReference Include="..\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj">
       <Project>{a4590bad-8e29-4a0f-8c67-fc87109a11dc}</Project>
       <Name>DeftPack.TestAutomation.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
+      <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
     </ProjectReference>
     <ProjectReference Include="..\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
       <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>

@@ -79,17 +79,20 @@
     <Compile Include="IElement.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="PageNotLoadedException.cs" />
-    <Compile Include="Selectors\Builders\Comparison.cs" />
-    <Compile Include="Selectors\Builders\SelectorBuilder.cs" />
-    <Compile Include="Selectors\ISelector.cs" />
+    <Compile Include="Selectors\Comparison.cs" />
+    <Compile Include="Selectors\SelectorBuilder.cs" />
     <Compile Include="MetaInformation\InputTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\Builders\ISelectorBuilder.cs" />
+    <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
     <Compile Include="StringExtension.cs" />
+    <Compile Include="WebDriverQueryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="jQueryLoader.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

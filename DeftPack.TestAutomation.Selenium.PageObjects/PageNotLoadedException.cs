@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DeftPack.TestAutomation.Functional
+namespace DeftPack.TestAutomation.Selenium.PageObjects
 {
     public class PageNotLoadedException : Exception
     {
