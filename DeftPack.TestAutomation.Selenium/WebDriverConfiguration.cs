@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 
 namespace DeftPack.TestAutomation.Selenium
 {
@@ -6,10 +7,10 @@ namespace DeftPack.TestAutomation.Selenium
     {
         public const string SectionName = "WebDriverConfiguration";
 
-        [ConfigurationProperty("driverLocation", IsRequired = true)]
+        [ConfigurationProperty("driverLocation", DefaultValue = "", IsRequired = false)]
         public string DriverLocation
         {
-            get { return (string)this["driverLocation"]; }
+            get { return (string)this["driverLocation"] ?? AppDomain.CurrentDomain.BaseDirectory; }
             set { this["driverLocation"] = value; }
         }
 
@@ -36,7 +37,11 @@ namespace DeftPack.TestAutomation.Selenium
 
         public static WebDriverConfiguration Config
         {
-            get { return (WebDriverConfiguration)ConfigurationManager.GetSection(SectionName); }
+            get
+            {
+                return (WebDriverConfiguration)ConfigurationManager.GetSection(SectionName) ??
+                       new WebDriverConfiguration();
+            }
         }
     }
 }

@@ -13,21 +13,23 @@ namespace DeftPack.TestAutomation.Selenium
 
         public IWebDriver Create(Browser browser)
         {
+            var driverLocation = _configuration.DriverLocation;
+
             switch (browser)
             {
                 case Browser.Firefox:
                     return new FirefoxDriver();
                 case Browser.InternetExplorer:
-                    return new InternetExplorerDriver(_configuration.DriverLocation);
+                    return new InternetExplorerDriver(driverLocation);
                 case Browser.Chrome:
-                    return new ChromeDriver(_configuration.DriverLocation);
+                    return new ChromeDriver(driverLocation);
                 case Browser.Safari:
                     return new SafariDriver();
                 case Browser.PhantomJS:
                     {
-                        var driverService = PhantomJSDriverService.CreateDefaultService(_configuration.DriverLocation);
+                        var driverService = PhantomJSDriverService.CreateDefaultService(driverLocation);
 
-                        if (_configuration.DebuggingPort > 0)
+                        if (_configuration != null && _configuration.DebuggingPort > 0)
                         {
                             driverService.AddArgument(string.Format("--remote-debugger-port={0}", _configuration.DebuggingPort));
                         }

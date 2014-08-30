@@ -22,7 +22,11 @@ namespace DeftPack.TestAutomation.Assertion
 
         public static PatientAssertionConfiguration Config
         {
-            get { return (PatientAssertionConfiguration)ConfigurationManager.GetSection(SectionName); }
+            get
+            {
+                return (PatientAssertionConfiguration)ConfigurationManager.GetSection(SectionName) ??
+                       new PatientAssertionConfiguration();
+            }
         }
     }
 }

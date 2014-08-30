@@ -44,14 +44,44 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Actions\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Asserting\DeftPack.TestAutomation.Assertion.csproj">
+      <Project>{509c1615-5a42-4af7-863d-87a68c68ab6f}</Project>
+      <Name>DeftPack.TestAutomation.Assertion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj">
+      <Project>{d3fe6faf-4a82-4f52-9d99-8189a1499e63}</Project>
+      <Name>DeftPack.TestAutomation.Functional</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj">
+      <Project>{a4590bad-8e29-4a0f-8c67-fc87109a11dc}</Project>
+      <Name>DeftPack.TestAutomation.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj">
+      <Project>{fcbd6357-619f-4b68-b7c0-0081923a2256}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.Drivers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
+      <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
+      <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>
+      <Name>DeftPack.TestAutomation.Selenium</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

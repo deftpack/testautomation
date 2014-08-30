@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Sel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion", "DeftPack.TestAutomation.Asserting\DeftPack.TestAutomation.Assertion.csproj", "{509C1615-5A42-4AF7-863D-87A68C68AB6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.Drivers", "DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj", "{FCBD6357-619F-4B68-B7C0-0081923A2256}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{509C1615-5A42-4AF7-863D-87A68C68AB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{509C1615-5A42-4AF7-863D-87A68C68AB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{509C1615-5A42-4AF7-863D-87A68C68AB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

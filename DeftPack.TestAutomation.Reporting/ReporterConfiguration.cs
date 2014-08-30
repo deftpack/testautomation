@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
+using System.Reflection;
 
 namespace DeftPack.TestAutomation.Reporting
 {
@@ -6,23 +8,27 @@ namespace DeftPack.TestAutomation.Reporting
     {
         public const string SectionName = "ReporterConfiguration";
 
-        [ConfigurationProperty("title", IsRequired = true)]
+        [ConfigurationProperty("title", DefaultValue = "", IsRequired = false)]
         public string Title
         {
-            get { return (string)this["title"]; }
+            get { return (string)this["title"] ?? Assembly.GetExecutingAssembly().GetName().Name; }
             set { this["title"] = value; }
         }
 
-        [ConfigurationProperty("location", IsRequired = true)]
+        [ConfigurationProperty("location", DefaultValue = "", IsRequired = false)]
         public string Location
         {
-            get { return (string)this["location"]; }
+            get { return (string)this["location"] ?? AppDomain.CurrentDomain.BaseDirectory; }
             set { this["location"] = value; }
         }
 
         public static ReporterConfiguration Config
         {
-            get { return (ReporterConfiguration)ConfigurationManager.GetSection(SectionName); }
+            get
+            {
+                return (ReporterConfiguration)ConfigurationManager.GetSection(SectionName) ??
+                       new ReporterConfiguration();
+            }
         }
     }
 }
