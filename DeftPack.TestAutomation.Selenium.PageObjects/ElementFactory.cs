@@ -1,5 +1,6 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table;
+using DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions;
 using OpenQA.Selenium;
 using System;
 using System.Linq;

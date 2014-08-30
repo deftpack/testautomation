@@ -73,5 +73,14 @@ namespace DeftPack.TestAutomation.Functional.Framework
             var action = _scope.Resolve<TestActionFactory>().Create<TAction>(parameters);
             Evaluator.Evaluate(action);
         }
+
+        protected TModel Evaluate<TAction, TModel>(params object[] parameters)
+            where TAction : TestFunction<TModel>
+            where TModel : class
+        {
+            var action = _scope.Resolve<TestActionFactory>().Create<TAction>(parameters);
+            Evaluator.Evaluate(action);
+            return action.Model;
+        }
     }
 }

@@ -71,6 +71,7 @@
     <Compile Include="DependencyInjection\FluentAutomationModule.cs" />
     <Compile Include="DependencyInjection\ReportingModule.cs" />
     <Compile Include="Evaluation\TestActionFactory.cs" />
+    <Compile Include="Evaluation\TestFunction.cs" />
     <Compile Include="Framework\AutomationTestSuite.cs" />
     <Compile Include="DependencyInjection\TestFramework.cs" />
     <Compile Include="Evaluation\TestAction.cs" />

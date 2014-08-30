@@ -4,7 +4,8 @@
     {
         public abstract bool Evaluate();
 
-        public virtual string ExtraMessage {
+        public virtual string ExtraMessage
+        {
             get { return null; }
         }
     }

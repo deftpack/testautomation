@@ -12,7 +12,7 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             _testReporter = testReporter;
         }
 
-        public ITestEvaluator Evaluate<T>(T evaluable) where T : TestAction
+        public void Evaluate<T>(T evaluable) where T : TestAction
         {
             bool isSuccess = false;
 
@@ -28,7 +28,6 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             }
 
             Assert.IsTrue(isSuccess);
-            return this;
         }
 
         private void Report<T>(bool isSuccess, string extraMessage)

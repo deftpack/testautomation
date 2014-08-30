@@ -2,6 +2,6 @@
 {
     public interface ITestEvaluator
     {
-        ITestEvaluator Evaluate<T>(T evaluable) where T : TestAction;
+        void Evaluate<T>(T evaluable) where T : TestAction;
     }
 }

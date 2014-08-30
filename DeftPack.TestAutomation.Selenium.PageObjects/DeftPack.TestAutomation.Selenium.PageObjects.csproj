@@ -33,9 +33,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LambdaToXpath">
-      <HintPath>..\packages\LambdaToXpath.1.1\lib\LambdaToXpath.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="WebDriver">
@@ -74,6 +71,7 @@
     <Compile Include="Elements\Table\TableHeader.cs" />
     <Compile Include="Elements\Table\TableRow.cs" />
     <Compile Include="Elements\Table\Table.cs" />
+    <Compile Include="LoadedAttribute.cs" />
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="IElement.cs" />
@@ -86,13 +84,19 @@
     <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
     <Compile Include="StringExtension.cs" />
-    <Compile Include="WebDriverQueryExtensions.cs" />
+    <Compile Include="WebDriverExtensions\WebDriverErrorHandlingExtensions.cs" />
+    <Compile Include="WebDriverExtensions\WebDriverJavaScriptExtensions.cs" />
+    <Compile Include="WebDriverExtensions\WebDriverPageExtensions.cs" />
+    <Compile Include="WebDriverExtensions\WebDriverQueryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="jQueryLoader.js" />
+    <EmbeddedResource Include="ClientSideHelpers\jQueryLoader.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientSideHelpers\ErrorHarvester.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

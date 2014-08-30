@@ -13,7 +13,7 @@ namespace DeftPack.TestAutomation.Selenium
             set { this["driverLocation"] = value; }
         }
 
-        [ConfigurationProperty("defaultBrowser", DefaultValue = Browser.Chrome, IsRequired = false)]
+        [ConfigurationProperty("defaultBrowser", DefaultValue = Browser.PhantomJS, IsRequired = false)]
         public Browser DefaultBrowser
         {
             get { return (Browser)this["defaultBrowser"]; }
@@ -25,6 +25,13 @@ namespace DeftPack.TestAutomation.Selenium
         {
             get { return (int)this["defaultDriverWaitSeconds"]; }
             set { this["defaultDriverWaitSeconds"] = value; }
+        }
+
+        [ConfigurationProperty("debuggingPort", DefaultValue = 0, IsRequired = false)]
+        public int DebuggingPort
+        {
+            get { return (int)this["debuggingPort"]; }
+            set { this["debuggingPort"] = value; }
         }
 
         public static WebDriverConfiguration Config

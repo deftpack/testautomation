@@ -24,7 +24,16 @@ namespace DeftPack.TestAutomation.Selenium
                 case Browser.Safari:
                     return new SafariDriver();
                 case Browser.PhantomJS:
-                    return new PhantomJSDriver(_configuration.DriverLocation);
+                    {
+                        var driverService = PhantomJSDriverService.CreateDefaultService(_configuration.DriverLocation);
+
+                        if (_configuration.DebuggingPort > 0)
+                        {
+                            driverService.AddArgument(string.Format("--remote-debugger-port={0}", _configuration.DebuggingPort));
+                        }
+
+                        return new PhantomJSDriver(driverService);
+                    }
             }
 
             throw new WebDriverNotFoundException(browser.ToString());
