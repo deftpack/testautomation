@@ -4,10 +4,9 @@
     {
         public TModel Model { get; protected set; }
 
-        public sealed override bool Evaluate()
+        public sealed override void Evaluate()
         {
             Model = CreateModel();
-            return Model != null;
         }
 
         public abstract TModel CreateModel();

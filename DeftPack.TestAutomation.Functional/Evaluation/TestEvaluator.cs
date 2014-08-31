@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 
 namespace DeftPack.TestAutomation.Functional.Evaluation
 {
@@ -14,20 +13,16 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
 
         public void Evaluate<T>(T evaluable) where T : TestAction
         {
-            bool isSuccess = false;
-
             try
             {
-                isSuccess = evaluable.Evaluate();
-                Report<T>(isSuccess, evaluable.ExtraMessage);
+                evaluable.Evaluate();
+                Report<T>(true, evaluable.ExtraMessage);
             }
             catch (Exception e)
             {
                 Report<T>(false, e.Message);
                 throw;
             }
-
-            Assert.IsTrue(isSuccess);
         }
 
         private void Report<T>(bool isSuccess, string extraMessage)
@@ -37,7 +32,7 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             if (extraMessage != null) message = string.Format(message, extraMessage);
 
             _testReporter.ReportStep(
-                    description.StepDescription,
+                    description.ActionSummary,
                     description.ExpectedResult,
                     message,
                     isSuccess);

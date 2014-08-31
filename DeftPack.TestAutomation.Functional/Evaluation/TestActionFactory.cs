@@ -9,25 +9,27 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
     public class TestActionFactory
     {
         private readonly IWebDriver _webDriver;
+        private readonly ViewFactory _viewFactory;
 
-        public TestActionFactory(IWebDriver webDriver)
+        public TestActionFactory(IWebDriver webDriver, ViewFactory viewFactory)
         {
             _webDriver = webDriver;
+            _viewFactory = viewFactory;
         }
 
         public TAction Create<TAction>(params object[] parameters) where TAction : TestAction
         {
-            var pageTypes = GetPageTypesForAction<TAction>();
-            var pages = pageTypes.Select(t => Activator.CreateInstance(t, _webDriver));
-            return (TAction)Activator.CreateInstance(typeof(TAction), pages.Concat(parameters).ToArray());
+            var viewTypes = GetViewTypesForAction<TAction>();
+            var views = viewTypes.Select(vt => _viewFactory.Create(vt, _webDriver));
+            return (TAction)Activator.CreateInstance(typeof(TAction), views.Concat(parameters).ToArray());
 
         }
 
-        private IEnumerable<Type> GetPageTypesForAction<TAction>()
+        private IEnumerable<Type> GetViewTypesForAction<TAction>()
         {
             return typeof(TAction).GetConstructors().Where(c => c.GetParameters().Any())
                     .SelectMany(x => x.GetParameters().Select(p => p.ParameterType))
-                    .Where(t => t.IsSubclassOf(typeof(Page))).Distinct();
+                    .Where(t => t.IsSubclassOf(typeof(View))).Distinct();
         }
     }
 }

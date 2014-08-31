@@ -2,7 +2,7 @@
 {
     public abstract class TestAction
     {
-        public abstract bool Evaluate();
+        public abstract void Evaluate();
 
         public virtual string ExtraMessage
         {

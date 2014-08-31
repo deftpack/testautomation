@@ -3,31 +3,52 @@ using DeftPack.TestAutomation.Selenium.PageObjects.Selectors;
 using DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions;
 using OpenQA.Selenium;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects
 {
-    public abstract class Page : IDisposable
+    public abstract class View : IDisposable
     {
-        protected IWebDriver WebDriver { get; private set; }
+        protected IWebDriver WebDriver
+        {
+            get { return _webDriver; }
+        }
+
         private readonly SelectorBuilderFactory _selectorBuilderFactory;
         private readonly ElementFactory _elementFactory;
+        private IWebDriver _webDriver;
 
-        protected Page(IWebDriver webDriver)
+        protected View()
         {
-            WebDriver = webDriver;
-            WebDriver.InitilaizejQuery();
-            WebDriver.InitilaizeJavaScriptErrorHarvester();
-
             _elementFactory = new ElementFactory();
             _selectorBuilderFactory = new SelectorBuilderFactory();
+        }
+
+        internal void SetWebDriver(IWebDriver webDriver)
+        {
+            _webDriver = webDriver;
+            _webDriver.InitilaizejQuery();
+            _webDriver.InitilaizeJavaScriptErrorHarvester();
         }
 
         public bool IsLoaded
         {
             get { return WebDriver.IsPageReady() && IsUrlMatching && AreElementsPresent; }
+        }
+
+
+        public bool IsRedirectedTo<TPage>() where TPage : View
+        {
+            var loadedAttribute = typeof(TPage).GetCustomAttribute<CheckViewUrlAttribute>();
+            return MatchUrl(loadedAttribute.UrlParts);
+        }
+
+        public bool IsRedirectedTo(params string[] url)
+        {
+            return MatchUrl(url);
         }
 
         public string JavaScriptErrors
@@ -44,6 +65,11 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
             get { return SelectorBuilder.Any; }
         }
 
+        protected ISelectorBuilder Element(string tagName)
+        {
+            return new SelectorBuilder(tagName);
+        }
+
         protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
         {
             return _elementFactory.Create<TElement>(WebDriver, builderFunc().Selector);
@@ -57,21 +83,27 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
 
         private bool IsUrlMatching
         {
-            get { return LoadedAttribute == null || WebDriver.Url.Contains(LoadedAttribute.UrlPart); }
+            get { return CheckViewUrlAttribute == null || MatchUrl(CheckViewUrlAttribute.UrlParts); }
         }
 
         private bool AreElementsPresent
         {
             get
             {
-                return LoadedAttribute == null || !LoadedAttribute.IsStrict ||
-                       GetType().GetProperties().All(x => x.GetValue(this) != null);
+                return GetType().GetProperties()
+                    .Where(p => p.GetCustomAttribute<DynamicElementAttribute>() == null)
+                    .All(x => x.GetValue(this) != null);
             }
         }
 
-        private LoadedAttribute LoadedAttribute
+        private bool MatchUrl(IEnumerable<string> urlParts)
         {
-            get { return GetType().GetCustomAttribute<LoadedAttribute>(); }
+            return urlParts.All(x => WebDriver.Url.Contains(x));
+        }
+
+        private CheckViewUrlAttribute CheckViewUrlAttribute
+        {
+            get { return GetType().GetCustomAttribute<CheckViewUrlAttribute>(); }
         }
 
         public void Dispose()

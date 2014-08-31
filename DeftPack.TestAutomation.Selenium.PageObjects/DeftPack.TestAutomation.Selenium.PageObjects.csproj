@@ -54,6 +54,7 @@
     <Compile Include="Capabilities\ISelectable.cs" />
     <Compile Include="Capabilities\ITextual.cs" />
     <Compile Include="Capabilities\IUploader.cs" />
+    <Compile Include="DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />
     <Compile Include="Elements\Containers\Form.cs" />
@@ -75,11 +76,11 @@
     <Compile Include="Elements\Table\TableHeader.cs" />
     <Compile Include="Elements\Table\TableRow.cs" />
     <Compile Include="Elements\Table\Table.cs" />
-    <Compile Include="LoadedAttribute.cs" />
+    <Compile Include="CheckViewUrlAttribute.cs" />
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="IElement.cs" />
-    <Compile Include="Page.cs" />
+    <Compile Include="View.cs" />
     <Compile Include="PageNotLoadedException.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
     <Compile Include="StringExtension.cs" />
+    <Compile Include="ViewFactory.cs" />
     <Compile Include="WebDriverExtensions\WebDriverErrorHandlingExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverJavaScriptExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverPageExtensions.cs" />

@@ -36,7 +36,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.42.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.2.42.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -47,15 +60,21 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Actions\Google\GoToFirst.cs" />
+    <Compile Include="Actions\Google\Search.cs" />
+    <Compile Include="Actions\TheVerge\TryToRegister.cs" />
+    <Compile Include="Views\Google\SearchResults.cs" />
+    <Compile Include="Views\Google\Welcome.cs" />
+    <Compile Include="Views\TheVerge\LoginPopUp.cs" />
+    <Compile Include="Views\TheVerge\RegisterPopUp.cs" />
+    <Compile Include="Views\TheVerge\SiteBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ComeFromGoogleFailToRegister.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Actions\" />
-    <Folder Include="Pages\" />
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DeftPack.TestAutomation.Asserting\DeftPack.TestAutomation.Assertion.csproj">
@@ -81,6 +100,10 @@
     <ProjectReference Include="..\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
       <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>
       <Name>DeftPack.TestAutomation.Selenium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation\DeftPack.TestAutomation.csproj">
+      <Project>{ce59c824-c745-4681-9700-809eaeb97d99}</Project>
+      <Name>DeftPack.TestAutomation</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
