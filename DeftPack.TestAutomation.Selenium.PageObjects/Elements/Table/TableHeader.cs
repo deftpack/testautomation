@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
     [HtmlTag("thead")]
     public class TableHeader : Element
     {
-        internal TableHeader(IWebElement proxyObject, IEnumerable<TableRow> rows)
+        public TableHeader(IWebElement proxyObject, IEnumerable<TableRow> rows)
             : base(proxyObject)
         {
             Rows = rows;

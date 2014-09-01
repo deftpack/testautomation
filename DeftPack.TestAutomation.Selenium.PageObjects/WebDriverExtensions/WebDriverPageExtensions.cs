@@ -16,8 +16,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 
         internal static bool IsAjaxFinished(this IWebDriver webDriver)
         {
-            return !webDriver.GetJsObject("window.jQuery").Equals("undefined") &&
-                    webDriver.GetJsObject("window.jQuery.active").Equals("0");
+            return webDriver.GetJsObject("window.SeleniumTesting.IsAjaxFinished()").Equals("true");
         }
     }
 }

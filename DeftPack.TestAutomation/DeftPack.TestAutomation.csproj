@@ -39,6 +39,7 @@
     <Compile Include="IReportSaver.cs" />
     <Compile Include="ITestScreenshotSaver.cs" />
     <Compile Include="MissingExpectedAttributeException.cs" />
+    <Compile Include="PageNotLoadedException.cs" />
     <Compile Include="TestReporterFinishedHandler.cs" />
     <Compile Include="ITestActionDescription.cs" />
     <Compile Include="ITestReporter.cs" />

@@ -20,6 +20,13 @@ namespace DeftPack.TestAutomation.Assertion
                 catch (TException)
                 {
                     if (numRetries <= 0) throw;
+                }
+                catch (NullReferenceException)
+                {
+                    if (numRetries <= 0) throw;
+                }
+                finally
+                {
                     Thread.Sleep(millisecondsBeforeRetry);
                 }
             } while (numRetries > tries++);

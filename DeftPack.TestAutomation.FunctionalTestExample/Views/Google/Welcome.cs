@@ -15,5 +15,11 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Views.Google
         {
             get { return QueryElement<Button>(x => x.WithId("gbqfba").Visible()); }
         }
+
+        [DynamicElement]
+        public Button SmallSearchButton
+        {
+            get { return QueryElement<Button>(x => x.WithId("gbqfb").Visible()); }
+        }
     }
 }

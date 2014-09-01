@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Containers
     [HtmlTag("form")]
     public class Form : Wrapper
     {
-        internal Form(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
+        public Form(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
 
         public string Action
         {

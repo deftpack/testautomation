@@ -10,7 +10,11 @@ namespace DeftPack.TestAutomation.Selenium
         [ConfigurationProperty("driverLocation", DefaultValue = "", IsRequired = false)]
         public string DriverLocation
         {
-            get { return (string)this["driverLocation"] ?? AppDomain.CurrentDomain.BaseDirectory; }
+            get
+            {
+                var driverLocation = (string)this["driverLocation"];
+                return string.IsNullOrEmpty(driverLocation) ? AppDomain.CurrentDomain.BaseDirectory : driverLocation;
+            }
             set { this["driverLocation"] = value; }
         }
 
@@ -37,11 +41,7 @@ namespace DeftPack.TestAutomation.Selenium
 
         public static WebDriverConfiguration Config
         {
-            get
-            {
-                return (WebDriverConfiguration)ConfigurationManager.GetSection(SectionName) ??
-                       new WebDriverConfiguration();
-            }
+            get { return (WebDriverConfiguration) ConfigurationManager.GetSection(SectionName) ?? new WebDriverConfiguration(); }
         }
     }
 }

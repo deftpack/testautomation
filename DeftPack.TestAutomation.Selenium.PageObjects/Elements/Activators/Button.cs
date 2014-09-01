@@ -11,7 +11,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators
     [HtmlInput(InputTypes.Image)]
     public class Button : Element, IClickable, ITextual
     {
-        internal Button(IWebElement proxyObject) : base(proxyObject) { }
+        public Button(IWebElement proxyObject) : base(proxyObject) { }
 
         public void Click()
         {

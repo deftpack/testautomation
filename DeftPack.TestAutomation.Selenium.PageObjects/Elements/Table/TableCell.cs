@@ -8,7 +8,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
     [HtmlTag("th")]
     public class TableCell : Wrapper
     {
-        internal TableCell(IWebElement proxyObject, IEnumerable<IElement> childs)
+        public TableCell(IWebElement proxyObject, IEnumerable<IElement> childs)
             : base(proxyObject, childs)
         {
         }

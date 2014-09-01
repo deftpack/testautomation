@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
     [HtmlTag("tfoot")]
     public class TableFooter : Element
     {
-        internal TableFooter(IWebElement proxyObject, IEnumerable<TableRow> rows)
+        public TableFooter(IWebElement proxyObject, IEnumerable<TableRow> rows)
             : base(proxyObject)
         {
             Rows = rows;

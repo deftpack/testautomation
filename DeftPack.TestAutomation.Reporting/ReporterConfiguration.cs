@@ -11,24 +11,28 @@ namespace DeftPack.TestAutomation.Reporting
         [ConfigurationProperty("title", DefaultValue = "", IsRequired = false)]
         public string Title
         {
-            get { return (string)this["title"] ?? Assembly.GetExecutingAssembly().GetName().Name; }
+            get
+            {
+                var title = (string) this["title"];
+                return string.IsNullOrWhiteSpace(title) ? Assembly.GetExecutingAssembly().GetName().Name : title;
+            }
             set { this["title"] = value; }
         }
 
         [ConfigurationProperty("location", DefaultValue = "", IsRequired = false)]
         public string Location
         {
-            get { return (string)this["location"] ?? AppDomain.CurrentDomain.BaseDirectory; }
+            get
+            {
+                var location = (string) this["location"];
+                return string.IsNullOrWhiteSpace(location) ? AppDomain.CurrentDomain.BaseDirectory : location; 
+            }
             set { this["location"] = value; }
         }
 
         public static ReporterConfiguration Config
         {
-            get
-            {
-                return (ReporterConfiguration)ConfigurationManager.GetSection(SectionName) ??
-                       new ReporterConfiguration();
-            }
+            get { return (ReporterConfiguration) ConfigurationManager.GetSection(SectionName) ?? new ReporterConfiguration(); }
         }
     }
 }

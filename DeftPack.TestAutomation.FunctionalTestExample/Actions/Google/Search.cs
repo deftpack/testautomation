@@ -1,7 +1,6 @@
 ﻿using DeftPack.TestAutomation.Assertion;
 using DeftPack.TestAutomation.Functional.Evaluation;
 using DeftPack.TestAutomation.FunctionalTestExample.Views.Google;
-using NUnit.Framework;
 
 namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
 {
@@ -9,7 +8,7 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
         ActionSummary = "Searching on Google's welcome page",
         ExpectedResult = "Getting redirected to the search result page",
         SuccessMessage = "Was able to search on word: {0}",
-        FailedMessage = "Failed to search on google, error happened: {0}")]
+        FailedMessage = "Failed to search on Google, error happened: {0}")]
     public class Search : TestAction
     {
         private readonly Welcome _welcomePage;
@@ -23,10 +22,10 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
 
         public override void Evaluate()
         {
-            PatientAssert.That(_welcomePage.IsLoaded, Is.True);
+            PatientAssert.IsTrue(() => _welcomePage.IsLoaded);
             _welcomePage.SearchBar.Enter(_textToSearch);
-            _welcomePage.SearchButton.Click();
-            PatientAssert.That(_welcomePage.IsRedirectedTo<SearchResults>(), Is.True);
+            _welcomePage.SmallSearchButton.Click();
+            PatientAssert.IsTrue(() => _welcomePage.IsRedirectedTo<SearchResults>());
         }
 
         public override string ExtraMessage

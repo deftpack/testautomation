@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
     [HtmlInput(InputTypes.Radio)]
     public class RadioButton : Element, ITextual
     {
-        internal RadioButton(IWebElement proxyObject) : base(proxyObject) { }
+        public RadioButton(IWebElement proxyObject) : base(proxyObject) { }
 
         public bool IsSelected
         {

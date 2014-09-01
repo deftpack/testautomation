@@ -6,7 +6,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media
     [HtmlTag("img")]
     public class Image : Element
     {
-        internal Image(IWebElement proxyObject) : base(proxyObject) { }
+        public Image(IWebElement proxyObject) : base(proxyObject) { }
 
         public string Source
         {

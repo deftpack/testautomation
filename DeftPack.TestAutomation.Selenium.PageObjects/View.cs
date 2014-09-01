@@ -39,7 +39,6 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
             get { return WebDriver.IsPageReady() && IsUrlMatching && AreElementsPresent; }
         }
 
-
         public bool IsRedirectedTo<TPage>() where TPage : View
         {
             var loadedAttribute = typeof(TPage).GetCustomAttribute<CheckViewUrlAttribute>();
@@ -90,9 +89,9 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
         {
             get
             {
-                return GetType().GetProperties()
-                    .Where(p => p.GetCustomAttribute<DynamicElementAttribute>() == null)
-                    .All(x => x.GetValue(this) != null);
+                var nonDynamicElementProperties = GetType().GetProperties()
+                    .Where(p => p.GetCustomAttribute<DynamicElementAttribute>() == null && p.PropertyType.IsSubclassOf(typeof(Element)));
+                return nonDynamicElementProperties.All(x => x.GetValue(this) != null);
             }
         }
 

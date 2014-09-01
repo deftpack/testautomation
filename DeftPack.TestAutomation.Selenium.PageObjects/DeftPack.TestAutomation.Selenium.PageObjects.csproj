@@ -81,7 +81,6 @@
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="IElement.cs" />
     <Compile Include="View.cs" />
-    <Compile Include="PageNotLoadedException.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />
     <Compile Include="MetaInformation\InputTypes.cs" />
@@ -99,7 +98,7 @@
     <EmbeddedResource Include="ClientSideHelpers\jQueryLoader.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientSideHelpers\ErrorHarvester.js" />
+    <EmbeddedResource Include="ClientSideHelpers\ErrorHarvester.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

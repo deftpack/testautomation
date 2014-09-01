@@ -6,7 +6,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
     [HtmlTag("table")]
     public class Table : Element
     {
-        internal Table(IWebElement proxyObject, TableBody body, TableHeader header = null, TableFooter footer = null)
+        public Table(IWebElement proxyObject, TableBody body, TableHeader header = null, TableFooter footer = null)
             : base(proxyObject)
         {
             Body = body;

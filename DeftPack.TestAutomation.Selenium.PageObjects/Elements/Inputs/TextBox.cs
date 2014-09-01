@@ -12,7 +12,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
     [HtmlInput(InputTypes.Email)]
     public class TextBox : Element, IEditable
     {
-        internal TextBox(IWebElement proxyObject) : base(proxyObject) { }
+        public TextBox(IWebElement proxyObject) : base(proxyObject) { }
 
         public void Enter(string text)
         {

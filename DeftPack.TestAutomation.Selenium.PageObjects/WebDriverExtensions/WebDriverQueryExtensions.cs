@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 {
@@ -13,13 +11,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 
         internal static IWebElement jQueryElement(this IWebDriver webDriver, string selector)
         {
-            return webDriver.jQueryElements(selector).FirstOrDefault();
+            return webDriver.GetJsObject<IWebElement>(string.Format("window.SeleniumTesting.QueryElement('{0}').get(0)", selector));
         }
-
-        internal static IEnumerable<IWebElement> jQueryElements(this IWebDriver webDriver, string selector)
-        {
-            return webDriver.GetJsObject<IEnumerable<IWebElement>>(string.Format("window.SeleniumTesting.QueryElement('{0}')", selector));
-        }
-
     }
 }

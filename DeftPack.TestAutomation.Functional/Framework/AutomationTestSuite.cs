@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using DeftPack.TestAutomation.Functional.DependencyInjection;
 using DeftPack.TestAutomation.Functional.Evaluation;
+using DeftPack.TestAutomation.Reporting;
 using DeftPack.TestAutomation.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -17,10 +18,7 @@ namespace DeftPack.TestAutomation.Functional.Framework
             get { return _scope.Resolve<IIndexReporter>(); }
         }
 
-        private ITestScreenshotSaver ScreenshotSaver
-        {
-            get { return _scope.Resolve<ITestScreenshotSaver>(); }
-        }
+        private ITestScreenshotSaver ScreenshotSaver { get; set; }
 
         private ITestEvaluator Evaluator
         {
@@ -52,6 +50,9 @@ namespace DeftPack.TestAutomation.Functional.Framework
         public void SetUp()
         {
             _scope = TestFramework.Container.BeginLifetimeScope();
+            ScreenshotSaver = new TestScreenshotSaver(
+                _scope.Resolve<IWebDriver>(), 
+                _scope.Resolve<ReporterSetting>().RootFolderFullPath);
             TestReporter.Finished += IndexReporter.HandleFinishedTestReport;
             TestReporter.Finished += ScreenshotSaver.HandleFinishedTestReport;
         }
@@ -62,6 +63,11 @@ namespace DeftPack.TestAutomation.Functional.Framework
             _scope.Dispose();
         }
         #endregion
+
+        protected void StartAtUrl(string url)
+        {
+             _scope.Resolve<IWebDriver>().NavigateToUrl(url);
+        }
 
         protected IWebDriver GetExtraWebDriver()
         {

@@ -13,7 +13,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
     [HtmlInput(InputTypes.DateTime)]
     public class NumberInput : Element
     {
-        internal NumberInput(IWebElement proxyObject) : base(proxyObject) { }
+        public NumberInput(IWebElement proxyObject) : base(proxyObject) { }
 
         public int Value
         {

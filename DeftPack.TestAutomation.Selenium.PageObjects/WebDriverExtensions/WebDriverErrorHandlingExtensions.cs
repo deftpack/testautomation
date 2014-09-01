@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using System.Collections.Generic;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 {

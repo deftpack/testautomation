@@ -10,12 +10,27 @@ namespace DeftPack.TestAutomation.Assertion
         private static readonly int NumberOfTries = PatientAssertionConfiguration.Config.NumberOfTries;
         private static readonly int MillisecondsBetweenTries = PatientAssertionConfiguration.Config.MillisecondsBetweenTries;
 
-        public static void That(object actual, IResolveConstraint expression)
+        public static void AreEqual(Func<object> obj1, object obj2)
+        {
+            That(obj1, Is.EqualTo(obj2));
+        }
+
+        public static void IsTrue(Func<object> actual)
+        {
+            That(actual, Is.True);
+        }
+
+        public static void IsFalse(Func<object> actual)
+        {
+            That(actual, Is.False);
+        }
+
+        public static void That(Func<object> actual, IResolveConstraint expression)
         {
             try
             {
                 Action retry = () =>
-                        Retry.RetryAction<AssertionException>(() => Assert.That(actual, expression), NumberOfTries,
+                        Retry.RetryAction<AssertionException>(() => Assert.That(actual(), expression), NumberOfTries,
                             MillisecondsBetweenTries);
                 Task.Factory.StartNew(retry).Wait();
             }

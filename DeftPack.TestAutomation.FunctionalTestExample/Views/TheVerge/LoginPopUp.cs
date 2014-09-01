@@ -1,6 +1,7 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
+using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media;
 
 namespace DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge
 {
@@ -25,6 +26,11 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge
         public Link RegisterLink
         {
             get { return QueryElement<Link>(x => x.WithHtmlAttribute("data-chorus-auth-goto", "register")); }
+        }
+        [DynamicElement]
+        public Label LoginErrorMessage
+        {
+            get { return QueryElement<Label>(x => x.WithCssClass("error").ChildOf(Any.WithId("chorus-auth-password"))); }
         }
     }
 }

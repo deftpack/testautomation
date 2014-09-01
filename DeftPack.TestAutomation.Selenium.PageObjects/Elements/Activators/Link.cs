@@ -8,7 +8,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators
     [HtmlTag("a")]
     public class Link : Wrapper, IClickable, ITextual
     {
-        internal Link(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
+        public Link(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
 
         public void Click()
         {

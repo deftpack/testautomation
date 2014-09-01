@@ -6,7 +6,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
     [HtmlInput(InputTypes.Checkbox)]
     public class CheckBox : Element
     {
-        internal CheckBox(IWebElement proxyObject) : base(proxyObject) { }
+        public CheckBox(IWebElement proxyObject) : base(proxyObject) { }
 
         public bool IsSelected
         {

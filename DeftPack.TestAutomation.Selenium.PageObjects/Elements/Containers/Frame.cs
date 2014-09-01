@@ -8,7 +8,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Containers
     [HtmlTag("frame")]
     public class Frame : Wrapper
     {
-        internal Frame(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
+        public Frame(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject, childs) { }
 
         public string Source
         {

@@ -16,7 +16,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media
     [HtmlInput(InputTypes.Hidden)]
     public class Label : Element, ITextual
     {
-        internal Label(IWebElement proxyObject) : base(proxyObject) { }
+        public Label(IWebElement proxyObject) : base(proxyObject) { }
 
         public string Text
         {

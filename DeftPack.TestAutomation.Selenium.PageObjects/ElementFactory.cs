@@ -3,6 +3,7 @@ using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table;
 using DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions;
 using OpenQA.Selenium;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects
@@ -14,6 +15,10 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
             var elementType = typeof (TElement);
             var webElement = webDriver.jQueryElement(selector);
 
+            if (webElement == null)
+            {
+                return null;
+            }
 
             if (elementType == typeof (TableRow))
             {
@@ -46,7 +51,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
 
         private TElement CreateWrapperElement<TElement>(IWebElement webElement) where TElement : Element
         {
-            var childElements = webElement.FindElements(By.CssSelector("*"));
+            IEnumerable<IElement> childElements = null; //webElement.FindElements(By.CssSelector("*"));
             return (TElement) Activator.CreateInstance(typeof (TElement), webElement, childElements);
         }
 

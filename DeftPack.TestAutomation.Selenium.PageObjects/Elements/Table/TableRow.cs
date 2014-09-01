@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
     [HtmlTag("tr")]
     public class TableRow : Element
     {
-        internal TableRow(IWebElement proxyObject, IEnumerable<TableCell> cells)
+        public TableRow(IWebElement proxyObject, IEnumerable<TableCell> cells)
             : base(proxyObject)
         {
             Cells = cells;

@@ -11,25 +11,26 @@ namespace DeftPack.TestAutomation.Functional.DependencyInjection
             builder.RegisterType<TemplateEngine>().As<ITemplateEngine>().InstancePerLifetimeScope();
             builder.RegisterType<ReporterSetting>().AsSelf().SingleInstance();
             builder.Register(x => new ReportSaver(x.Resolve<ReporterSetting>().RootFolderFullPath))
+                .As<IReportSaver>()
                 .InstancePerDependency();
             builder.Register(x => ReporterConfiguration.Config).SingleInstance();
             
             builder.Register((x, p) =>
             {
                 var setting = x.Resolve<ReporterSetting>();
-                var reportSaver = x.Resolve<ReportSaver>();
+                var reportSaver = x.Resolve<IReportSaver>();
                 var templateEnige = x.Resolve<ITemplateEngine>();
                 return new TestReporter(setting.Title, setting.StartTime, p.Named<ITestSummary>("testSummary"), reportSaver,
                     templateEnige);
-            }).OnRelease(x => x.Dispose()).InstancePerLifetimeScope();
+            }).As<ITestReporter>().OnRelease(x => x.Dispose()).InstancePerLifetimeScope();
 
             builder.Register(x =>
             {
                 var setting = x.Resolve<ReporterSetting>();
-                var reportSaver = x.Resolve<ReportSaver>();
+                var reportSaver = x.Resolve<IReportSaver>();
                 var templateEnige = x.Resolve<ITemplateEngine>();
                 return new IndexReporter(setting.Title, setting.StartTime, reportSaver, templateEnige);
-            }).SingleInstance();
+            }).As<IIndexReporter>().SingleInstance();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
     [HtmlTag("select")]
     public class Dropdown : Element, ISelectable
     {
-        internal Dropdown(IWebElement proxyObject) : base(proxyObject) { }
+        public Dropdown(IWebElement proxyObject) : base(proxyObject) { }
 
         public IEnumerable<string> Options
         {
