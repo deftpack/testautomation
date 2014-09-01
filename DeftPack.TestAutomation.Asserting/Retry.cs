@@ -19,11 +19,11 @@ namespace DeftPack.TestAutomation.Assertion
                 }
                 catch (TException)
                 {
-                    if (numRetries <= 0) throw;
+                    if (numRetries <= tries) throw;
                 }
                 catch (NullReferenceException)
                 {
-                    if (numRetries <= 0) throw;
+                    if (numRetries <= tries) throw;
                 }
                 finally
                 {

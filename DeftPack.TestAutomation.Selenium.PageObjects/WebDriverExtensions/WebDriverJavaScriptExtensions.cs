@@ -6,12 +6,12 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 {
     internal static class WebDriverJavaScriptExtensions
     {
-        internal static object GetJsObject(this IWebDriver webDriver, string command)
+        private static object GetJsObject(this IWebDriver webDriver, string command)
         {
             return ((IJavaScriptExecutor)webDriver).ExecuteScript(string.Format(@"return {0};", command));
         }
 
-        internal static TReturned GetJsObject<TReturned>(this IWebDriver webDriver, string command) where TReturned : class 
+        internal static TReturned GetJsObject<TReturned>(this IWebDriver webDriver, string command)
         {
             return (TReturned)webDriver.GetJsObject(command);
         }

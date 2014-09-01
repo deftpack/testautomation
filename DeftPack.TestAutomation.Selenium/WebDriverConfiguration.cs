@@ -39,9 +39,16 @@ namespace DeftPack.TestAutomation.Selenium
             set { this["debuggingPort"] = value; }
         }
 
+        [ConfigurationProperty("userAgent", DefaultValue = "", IsRequired = false)]
+        public string UserAgent
+        {
+            get { return (string)this["userAgent"]; }
+            set { this["userAgent"] = value; }
+        }
+
         public static WebDriverConfiguration Config
         {
-            get { return (WebDriverConfiguration) ConfigurationManager.GetSection(SectionName) ?? new WebDriverConfiguration(); }
+            get { return (WebDriverConfiguration)ConfigurationManager.GetSection(SectionName) ?? new WebDriverConfiguration(); }
         }
     }
 }

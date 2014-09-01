@@ -28,13 +28,21 @@ namespace DeftPack.TestAutomation.Selenium
                 case Browser.PhantomJS:
                     {
                         var driverService = PhantomJSDriverService.CreateDefaultService(driverLocation);
+                        var driverOptions = new PhantomJSOptions();
 
                         if (_configuration != null && _configuration.DebuggingPort > 0)
                         {
-                            driverService.AddArgument(string.Format("--remote-debugger-port={0}", _configuration.DebuggingPort));
+                            driverService.AddArgument(string.Format("--remote-debugger-port={0}",
+                                _configuration.DebuggingPort));
                         }
 
-                        return new PhantomJSDriver(driverService);
+                        if (_configuration != null && !string.IsNullOrWhiteSpace(_configuration.UserAgent))
+                        {
+                            driverOptions.AddAdditionalCapability("phantomjs.page.settings.userAgent",
+                                _configuration.UserAgent);
+                        }
+
+                        return new PhantomJSDriver(driverService, driverOptions);
                     }
             }
 

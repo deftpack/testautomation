@@ -11,11 +11,10 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
     {
         public IEnumerable<ISelectorBuilder> Create<TElement>() where TElement : Element
         {
-            var tagNames = typeof (TElement).GetCustomAttributes<HtmlTagAttribute>()
-                .Where(a => !(a is HtmlInputAttribute)).Select(x => x.TagName);
-            var inputTypes = typeof (TElement).GetCustomAttributes<HtmlInputAttribute>().Select(x => x.InputType);
-            var selectorBuilders = tagNames.Select(x => (ISelectorBuilder) (new SelectorBuilder(x))).ToList();
-            selectorBuilders.AddRange(inputTypes.Select(i => (ISelectorBuilder) (new SelectorBuilder(i))));
+            var tagNames = typeof(TElement).GetCustomAttributes<HtmlTagAttribute>().Select(x => x.TagName);
+            var inputTypes = typeof(TElement).GetCustomAttributes<HtmlInputAttribute>().Select(x => x.InputType);
+            var selectorBuilders = tagNames.Select(x => (ISelectorBuilder)(new SelectorBuilder(x))).ToList();
+            selectorBuilders.AddRange(inputTypes.Select(i => (ISelectorBuilder)(new SelectorBuilder(i))));
             return selectorBuilders;
         }
 

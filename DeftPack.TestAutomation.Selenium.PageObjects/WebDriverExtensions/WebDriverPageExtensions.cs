@@ -11,12 +11,12 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
 
         internal static bool IsDocumentReady(this IWebDriver webDriver)
         {
-            return webDriver.GetJsObject("document.readyState").Equals("complete");
+            return webDriver.GetJsObject<string>("document.readyState").Equals("complete");
         }
 
         internal static bool IsAjaxFinished(this IWebDriver webDriver)
         {
-            return webDriver.GetJsObject("window.SeleniumTesting.IsAjaxFinished()").Equals("true");
+            return webDriver.GetJsObject<bool>("window.SeleniumTesting.IsAjaxFinished()").Equals(true);
         }
     }
 }
