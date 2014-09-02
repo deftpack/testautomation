@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Reflection;
 
 namespace DeftPack.TestAutomation.Reporting
 {
@@ -13,8 +12,8 @@ namespace DeftPack.TestAutomation.Reporting
         {
             get
             {
-                var title = (string) this["title"];
-                return string.IsNullOrWhiteSpace(title) ? Assembly.GetExecutingAssembly().GetName().Name : title;
+                var title = (string)this["title"];
+                return string.IsNullOrWhiteSpace(title) ? AppDomain.CurrentDomain.SetupInformation.ApplicationName : title;
             }
             set { this["title"] = value; }
         }
@@ -24,15 +23,15 @@ namespace DeftPack.TestAutomation.Reporting
         {
             get
             {
-                var location = (string) this["location"];
-                return string.IsNullOrWhiteSpace(location) ? AppDomain.CurrentDomain.BaseDirectory : location; 
+                var location = (string)this["location"];
+                return string.IsNullOrWhiteSpace(location) ? AppDomain.CurrentDomain.BaseDirectory : location;
             }
             set { this["location"] = value; }
         }
 
         public static ReporterConfiguration Config
         {
-            get { return (ReporterConfiguration) ConfigurationManager.GetSection(SectionName) ?? new ReporterConfiguration(); }
+            get { return (ReporterConfiguration)ConfigurationManager.GetSection(SectionName) ?? new ReporterConfiguration(); }
         }
     }
 }

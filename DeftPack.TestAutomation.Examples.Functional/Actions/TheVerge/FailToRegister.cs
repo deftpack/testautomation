@@ -1,9 +1,9 @@
 ﻿using DeftPack.TestAutomation.Assertion;
+using DeftPack.TestAutomation.Examples.Functional.Models;
+using DeftPack.TestAutomation.Examples.Functional.Views.TheVerge;
 using DeftPack.TestAutomation.Functional.Evaluation;
-using DeftPack.TestAutomation.FunctionalTestExample.Models;
-using DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.TheVerge
+namespace DeftPack.TestAutomation.Examples.Functional.Actions.TheVerge
 {
     [TestActionDescription(
         ActionSummary = "Go to user options and try to register with invalid details",
@@ -17,8 +17,8 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.TheVerge
         private readonly RegisterModel _registerModel;
 
         public FailToRegister(
-            SiteBase googleTopic, 
-            LoginPopUp login, 
+            SiteBase googleTopic,
+            LoginPopUp login,
             RegisterPopUp register,
             RegisterModel registerModel)
         {

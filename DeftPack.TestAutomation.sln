@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Fun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium", "DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj", "{38731F5C-8555-4CFB-886C-0E103B67CE27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "DeftPack.TestAutomation.FunctionalTestExample\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "DeftPack.TestAutomation.Examples.Functional\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting", "DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj", "{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}"
 EndProject

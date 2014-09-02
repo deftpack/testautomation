@@ -3,7 +3,7 @@ using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge
+namespace DeftPack.TestAutomation.Examples.Functional.Views.TheVerge
 {
     public class LoginPopUp : View
     {

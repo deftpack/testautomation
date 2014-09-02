@@ -1,7 +1,7 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge
+namespace DeftPack.TestAutomation.Examples.Functional.Views.TheVerge
 {
     [CheckViewUrl("theverge.com")]
     public class SiteBase : View

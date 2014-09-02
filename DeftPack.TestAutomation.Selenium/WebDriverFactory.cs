@@ -18,16 +18,36 @@ namespace DeftPack.TestAutomation.Selenium
             switch (browser)
             {
                 case Browser.Firefox:
-                    return new FirefoxDriver();
+                    {
+                        var profile = new FirefoxProfile();
+                        if (_configuration != null && !string.IsNullOrWhiteSpace(_configuration.UserAgent))
+                        {
+                            profile.SetPreference("general.useragent.override",
+                                _configuration.UserAgent);
+                        }
+                        return new FirefoxDriver();
+                    }
                 case Browser.InternetExplorer:
-                    return new InternetExplorerDriver(driverLocation);
+                    {
+                        var driverService = InternetExplorerDriverService.CreateDefaultService();
+                        driverService.HideCommandPromptWindow = true;
+                        return new InternetExplorerDriver(driverService, new InternetExplorerOptions());
+                    }
                 case Browser.Chrome:
-                    return new ChromeDriver(driverLocation);
+                    {
+                        var driverService = ChromeDriverService.CreateDefaultService(driverLocation);
+                        driverService.HideCommandPromptWindow = true;
+                        return new ChromeDriver(driverService, new ChromeOptions());
+                    }
                 case Browser.Safari:
-                    return new SafariDriver();
+                    {
+                        return new SafariDriver();
+                    }
                 case Browser.PhantomJS:
                     {
                         var driverService = PhantomJSDriverService.CreateDefaultService(driverLocation);
+                        driverService.HideCommandPromptWindow = true;
+
                         var driverOptions = new PhantomJSOptions();
 
                         if (_configuration != null && _configuration.DebuggingPort > 0)

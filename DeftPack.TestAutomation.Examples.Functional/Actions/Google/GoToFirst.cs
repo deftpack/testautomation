@@ -1,9 +1,9 @@
 ﻿using DeftPack.TestAutomation.Assertion;
+using DeftPack.TestAutomation.Examples.Functional.Views.Google;
+using DeftPack.TestAutomation.Examples.Functional.Views.TheVerge;
 using DeftPack.TestAutomation.Functional.Evaluation;
-using DeftPack.TestAutomation.FunctionalTestExample.Views.Google;
-using DeftPack.TestAutomation.FunctionalTestExample.Views.TheVerge;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
+namespace DeftPack.TestAutomation.Examples.Functional.Actions.Google
 {
     [TestActionDescription(
         ActionSummary = "Get from Goggle's search result page to first result's page",
@@ -23,7 +23,7 @@ namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
         public override void Evaluate()
         {
             PatientAssert.IsTrue(() => _searchResultsPage.IsLoaded);
-            PatientAssert.AreEqual(() => _searchResultsPage.FirstResult.Text,_expectedLinkText);
+            PatientAssert.AreEqual(() => _searchResultsPage.FirstResult.Text, _expectedLinkText);
             _searchResultsPage.FirstResult.Click();
             PatientAssert.IsTrue(() => _searchResultsPage.IsRedirectedTo<SiteBase>());
         }

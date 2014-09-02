@@ -1,8 +1,8 @@
 ﻿using DeftPack.TestAutomation.Assertion;
+using DeftPack.TestAutomation.Examples.Functional.Views.Google;
 using DeftPack.TestAutomation.Functional.Evaluation;
-using DeftPack.TestAutomation.FunctionalTestExample.Views.Google;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Actions.Google
+namespace DeftPack.TestAutomation.Examples.Functional.Actions.Google
 {
     [TestActionDescription(
         ActionSummary = "Searching on Google's welcome page",

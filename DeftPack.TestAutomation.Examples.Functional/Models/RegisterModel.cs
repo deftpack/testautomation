@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.FunctionalTestExample.Models
+﻿namespace DeftPack.TestAutomation.Examples.Functional.Models
 {
     public class RegisterModel
     {

@@ -2,7 +2,7 @@
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
 
-namespace DeftPack.TestAutomation.FunctionalTestExample.Views.Google
+namespace DeftPack.TestAutomation.Examples.Functional.Views.Google
 {
     [CheckViewUrl("google")]
     public class Welcome : View

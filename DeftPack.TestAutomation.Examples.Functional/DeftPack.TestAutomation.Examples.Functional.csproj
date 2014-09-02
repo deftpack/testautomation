@@ -6,8 +6,8 @@
     <ProjectGuid>{CF34D149-D04F-4646-85B2-B56EE5DC8B83}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DeftPack.TestAutomation.FunctionalTestExample</RootNamespace>
-    <AssemblyName>DeftPack.TestAutomation.FunctionalTestExample</AssemblyName>
+    <RootNamespace>DeftPack.TestAutomation.Examples.Functional</RootNamespace>
+    <AssemblyName>DeftPack.TestAutomation.Examples.Functional</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
