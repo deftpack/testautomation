@@ -4,6 +4,6 @@ testautomation
 
 Test Automation Pack utilizing Selenium
 
-* [Project](testautomation.deftpack.com) (or [here](testautomation.deftpack.co.uk))
-* [Board](board.testautomation.deftpack.com) (or [here](board.testautomation.deftpack.co.uk))
-* [Slack](slack.testautomation.deftpack.com) (or [here](slack.testautomation.deftpack.co.uk))
+* [Project](https://testautomation.deftpack.com) (or [here](https://testautomation.deftpack.co.uk))
+* [Board](https://board.testautomation.deftpack.com) (or [here](https://board.testautomation.deftpack.co.uk))
+* [Slack](https://slack.testautomation.deftpack.com) (or [here](https://slack.testautomation.deftpack.co.uk))
