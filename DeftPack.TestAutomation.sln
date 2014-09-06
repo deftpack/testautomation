@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Functional", "DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj", "{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Functional", "Libraries\DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj", "{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium", "DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj", "{38731F5C-8555-4CFB-886C-0E103B67CE27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium", "Libraries\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj", "{38731F5C-8555-4CFB-886C-0E103B67CE27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "DeftPack.TestAutomation.Examples.Functional\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "Examples\DeftPack.TestAutomation.Examples.Functional\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting", "DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj", "{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting", "Libraries\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj", "{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation", "DeftPack.TestAutomation\DeftPack.TestAutomation.csproj", "{CE59C824-C745-4681-9700-809EAEB97D99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation", "Libraries\DeftPack.TestAutomation\DeftPack.TestAutomation.csproj", "{CE59C824-C745-4681-9700-809EAEB97D99}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{84CFB332-1C4A-4FF5-AC31-10E7827BC4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects", "DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj", "{F4A3E8FB-765A-4117-A55A-8B980961447D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects", "Libraries\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj", "{F4A3E8FB-765A-4117-A55A-8B980961447D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion", "DeftPack.TestAutomation.Assertion\DeftPack.TestAutomation.Assertion.csproj", "{509C1615-5A42-4AF7-863D-87A68C68AB6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion", "Libraries\DeftPack.TestAutomation.Assertion\DeftPack.TestAutomation.Assertion.csproj", "{509C1615-5A42-4AF7-863D-87A68C68AB6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.Drivers", "DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj", "{FCBD6357-619F-4B68-B7C0-0081923A2256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.Drivers", "Libraries\DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj", "{FCBD6357-619F-4B68-B7C0-0081923A2256}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8B7A2670-D69C-42C9-BFE4-5497A615933A}"
 EndProject
