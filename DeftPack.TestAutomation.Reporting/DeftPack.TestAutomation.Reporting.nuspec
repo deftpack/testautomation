@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DeftPack.TestAutomation.Reporting</id>
+        <version>0.2.0</version>
+        <authors>Deftpack</authors>
+        <licenseUrl>https://raw.githubusercontent.com/deftpack/testautomation/master/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/deftpack/testautomation</projectUrl>
+        <iconUrl>https://avatars1.githubusercontent.com/u/8501239?v=2&amp;s=460</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Page Objects extensions on top of Selenium WebDriver</description>
+        <language>en-GB</language>
+        <dependencies>
+            <dependency id="Microsoft.AspNet.Razor" version="3.0.0" />
+			<dependency id="RazorEngine" version="3.4.1" />
+        </dependencies>
+    </metadata>
+    <files>
+		<file src="bin\Release\DeftPack.TestAutomation.dll" target="lib\DeftPack.TestAutomation.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.pdb" target="lib\DeftPack.TestAutomation.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Reporting.dll" target="lib\DeftPack.TestAutomation.Reporting.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Reporting.pdb" target="lib\DeftPack.TestAutomation.Reporting.pdb" />
+        <file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
+		<file src="**\*.css" exclude="bin\**\*.css;obj\**\*.css;Properties\**\*.css" target="src" />
+		<file src="**\*.html" exclude="bin\**\*.html;obj\**\*.html;Properties\**\*.html" target="src" />
+    </files>
+</package>
