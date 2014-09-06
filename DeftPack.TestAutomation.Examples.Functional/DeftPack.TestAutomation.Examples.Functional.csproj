@@ -78,7 +78,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DeftPack.TestAutomation.Asserting\DeftPack.TestAutomation.Assertion.csproj">
+    <ProjectReference Include="..\DeftPack.TestAutomation.Assertion\DeftPack.TestAutomation.Assertion.csproj">
       <Project>{509c1615-5a42-4af7-863d-87a68c68ab6f}</Project>
       <Name>DeftPack.TestAutomation.Assertion</Name>
     </ProjectReference>

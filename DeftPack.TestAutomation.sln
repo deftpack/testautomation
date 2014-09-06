@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{84
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects", "DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj", "{F4A3E8FB-765A-4117-A55A-8B980961447D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion", "DeftPack.TestAutomation.Asserting\DeftPack.TestAutomation.Assertion.csproj", "{509C1615-5A42-4AF7-863D-87A68C68AB6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion", "DeftPack.TestAutomation.Assertion\DeftPack.TestAutomation.Assertion.csproj", "{509C1615-5A42-4AF7-863D-87A68C68AB6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.Drivers", "DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj", "{FCBD6357-619F-4B68-B7C0-0081923A2256}"
 EndProject
