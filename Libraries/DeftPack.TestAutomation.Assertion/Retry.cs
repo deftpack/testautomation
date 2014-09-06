@@ -1,17 +1,25 @@
 ﻿using System;
-using System.Threading;
 
 namespace DeftPack.TestAutomation.Assertion
 {
-    internal class Retry
+    public class Retry
     {
-        public static void RetryAction<TException>(Action action, int numRetries, int millisecondsBeforeRetry)
+        private readonly IWaitProvider _waitProvider;
+
+        public Retry(IWaitProvider waitProvider)
+        {
+            _waitProvider = waitProvider;
+        }
+
+        public void RetryAction<TException>(Action action, int numRetries, int millisecondsBeforeRetry)
             where TException : Exception
         {
             var tries = 0;
 
             do
             {
+                tries++;
+
                 try
                 {
                     action();
@@ -25,11 +33,10 @@ namespace DeftPack.TestAutomation.Assertion
                 {
                     if (numRetries <= tries) throw;
                 }
-                finally
-                {
-                    Thread.Sleep(millisecondsBeforeRetry);
-                }
-            } while (numRetries > tries++);
+
+                _waitProvider.Wait(millisecondsBeforeRetry);
+
+            } while (numRetries > tries);
         }
     }
 }

@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{C8833316-2DBB-4779-AB20-FD0701EE0D50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Assertion.UnitTests", "UnitTests\DeftPack.TestAutomation.Assertion.UnitTests\DeftPack.TestAutomation.Assertion.UnitTests.csproj", "{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCBD6357-619F-4B68-B7C0-0081923A2256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{F4A3E8FB-765A-4117-A55A-8B980961447D} = {C8833316-2DBB-4779-AB20-FD0701EE0D50}
 		{509C1615-5A42-4AF7-863D-87A68C68AB6F} = {C8833316-2DBB-4779-AB20-FD0701EE0D50}
 		{FCBD6357-619F-4B68-B7C0-0081923A2256} = {C8833316-2DBB-4779-AB20-FD0701EE0D50}
+		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A} = {8B7A2670-D69C-42C9-BFE4-5497A615933A}
 	EndGlobalSection
 EndGlobal

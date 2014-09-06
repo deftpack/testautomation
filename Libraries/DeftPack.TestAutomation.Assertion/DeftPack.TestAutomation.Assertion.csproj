@@ -40,10 +40,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IWaitProvider.cs" />
     <Compile Include="PatientAssert.cs" />
     <Compile Include="PatientAssertionConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retry.cs" />
+    <Compile Include="WaitProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

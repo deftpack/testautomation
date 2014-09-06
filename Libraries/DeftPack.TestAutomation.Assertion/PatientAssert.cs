@@ -7,6 +7,7 @@ namespace DeftPack.TestAutomation.Assertion
 {
     public class PatientAssert
     {
+        private static readonly IWaitProvider WaitProvider = new WaitProvider();
         private static readonly int NumberOfTries = PatientAssertionConfiguration.Config.NumberOfTries;
         private static readonly int MillisecondsBetweenTries = PatientAssertionConfiguration.Config.MillisecondsBetweenTries;
 
@@ -29,9 +30,8 @@ namespace DeftPack.TestAutomation.Assertion
         {
             try
             {
-                Action retry = () =>
-                        Retry.RetryAction<AssertionException>(() => Assert.That(actual(), expression), NumberOfTries,
-                            MillisecondsBetweenTries);
+                Action retry = () => new Retry(WaitProvider)
+                    .RetryAction<AssertionException>(() => Assert.That(actual(), expression), NumberOfTries, MillisecondsBetweenTries);
                 Task.Factory.StartNew(retry).Wait();
             }
             catch (Exception exception)
