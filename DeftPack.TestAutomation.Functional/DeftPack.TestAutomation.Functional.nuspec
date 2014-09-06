@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DeftPack.TestAutomation.Functional</id>
+        <version>0.2.0</version>
+        <authors>Deftpack</authors>
+        <licenseUrl>https://raw.githubusercontent.com/deftpack/testautomation/master/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/deftpack/testautomation</projectUrl>
+        <iconUrl>https://avatars1.githubusercontent.com/u/8501239?v=2&amp;s=460</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Automation Testing Package for Functional Tests with Selenium</description>
+        <language>en-GB</language>
+        <dependencies>
+			<dependency id="Autofac" version="3.5.2" />
+			<dependency id="DeftPack.TestAutomation.Reporting" version="0.2.0" />
+			<dependency id="DeftPack.TestAutomation.Selenium.PageObjects" version="0.2.0" />
+			<dependency id="Microsoft.AspNet.Razor" version="3.0.0" />
+			<dependency id="NUnit" version="2.6.3" />
+			<dependency id="RazorEngine" version="3.4.1" />
+            <dependency id="Selenium.Support" version="2.42.0" />
+			<dependency id="Selenium.WebDriver" version="2.42.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\DeftPack.TestAutomation.Functional.dll" target="lib\DeftPack.TestAutomation.Functional.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Functional.pdb" target="lib\DeftPack.TestAutomation.Functional.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.dll" target="lib\DeftPack.TestAutomation.Selenium.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.pdb" target="lib\DeftPack.TestAutomation.Selenium.pdb" />
+		<file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
+    </files>
+</package>

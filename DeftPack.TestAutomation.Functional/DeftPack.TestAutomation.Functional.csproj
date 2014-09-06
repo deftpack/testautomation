@@ -35,8 +35,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="DeftPack.TestAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="DeftPack.TestAutomation.Reporting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DeftPack.TestAutomation.Selenium.PageObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DeftPack.TestAutomation.Selenium.PageObjects.0.2.0\lib\DeftPack.TestAutomation.Selenium.PageObjects.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,21 +87,9 @@
     <Compile Include="TestScreenshotSaver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj">
-      <Project>{a4590bad-8e29-4a0f-8c67-fc87109a11dc}</Project>
-      <Name>DeftPack.TestAutomation.Reporting</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
-      <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
-      <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
       <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>
       <Name>DeftPack.TestAutomation.Selenium</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DeftPack.TestAutomation\DeftPack.TestAutomation.csproj">
-      <Project>{ce59c824-c745-4681-9700-809eaeb97d99}</Project>
-      <Name>DeftPack.TestAutomation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
