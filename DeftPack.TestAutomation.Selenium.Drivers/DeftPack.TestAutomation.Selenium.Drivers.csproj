@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Tools\install.ps1" />
+    <None Include="Tools\uninstall.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Label="DownloadIEDriverBuildTask">
