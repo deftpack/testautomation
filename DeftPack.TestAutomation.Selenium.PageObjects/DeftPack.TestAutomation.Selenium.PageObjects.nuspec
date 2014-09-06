@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DeftPack.TestAutomation.Selenium.PageObjects</id>
+        <version>0.2.0</version>
+        <authors>Deftpack</authors>
+        <licenseUrl>https://raw.githubusercontent.com/deftpack/testautomation/master/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/deftpack/testautomation</projectUrl>
+        <iconUrl>https://avatars1.githubusercontent.com/u/8501239?v=2&amp;s=460</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Page Objects extensions on top of Selenium WebDriver</description>
+        <language>en-GB</language>
+        <dependencies>
+            <dependency id="Selenium.Support" version="2.42.0" />
+			<dependency id="Selenium.WebDriver" version="2.42.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.dll" target="lib\DeftPack.TestAutomation.Selenium.PageObjects.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.pdb" target="lib\DeftPack.TestAutomation.Selenium.PageObjects.pdb" />
+        <file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
+    </files>
+</package>
