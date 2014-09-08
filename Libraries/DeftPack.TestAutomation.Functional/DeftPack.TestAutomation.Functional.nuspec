@@ -22,10 +22,10 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\DeftPack.TestAutomation.Functional.dll" target="lib\DeftPack.TestAutomation.Functional.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.Functional.pdb" target="lib\DeftPack.TestAutomation.Functional.pdb" />
-        <file src="bin\Release\DeftPack.TestAutomation.Selenium.dll" target="lib\DeftPack.TestAutomation.Selenium.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.Selenium.pdb" target="lib\DeftPack.TestAutomation.Selenium.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Functional.dll" target="lib\net45\DeftPack.TestAutomation.Functional.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Functional.pdb" target="lib\net45\DeftPack.TestAutomation.Functional.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.dll" target="lib\net45\DeftPack.TestAutomation.Selenium.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.pdb" target="lib\net45\DeftPack.TestAutomation.Selenium.pdb" />
 		<file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
     </files>
 </package>

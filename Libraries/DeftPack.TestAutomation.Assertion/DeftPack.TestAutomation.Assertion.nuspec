@@ -15,8 +15,8 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\DeftPack.TestAutomation.Assertion.dll" target="lib\DeftPack.TestAutomation.Assertion.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.Assertion.pdb" target="lib\DeftPack.TestAutomation.Assertion.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Assertion.dll" target="lib\net45\DeftPack.TestAutomation.Assertion.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Assertion.pdb" target="lib\net45\DeftPack.TestAutomation.Assertion.pdb" />
         <file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
     </files>
 </package>

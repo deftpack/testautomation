@@ -16,8 +16,8 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.dll" target="lib\DeftPack.TestAutomation.Selenium.PageObjects.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.pdb" target="lib\DeftPack.TestAutomation.Selenium.PageObjects.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.dll" target="lib\net45\DeftPack.TestAutomation.Selenium.PageObjects.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Selenium.PageObjects.pdb" target="lib\net45\DeftPack.TestAutomation.Selenium.PageObjects.pdb" />
         <file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
     </files>
 </package>

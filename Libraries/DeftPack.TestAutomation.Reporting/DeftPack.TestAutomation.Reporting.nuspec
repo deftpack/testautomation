@@ -16,10 +16,10 @@
         </dependencies>
     </metadata>
     <files>
-		<file src="bin\Release\DeftPack.TestAutomation.dll" target="lib\DeftPack.TestAutomation.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.pdb" target="lib\DeftPack.TestAutomation.pdb" />
-        <file src="bin\Release\DeftPack.TestAutomation.Reporting.dll" target="lib\DeftPack.TestAutomation.Reporting.dll" />
-        <file src="bin\Release\DeftPack.TestAutomation.Reporting.pdb" target="lib\DeftPack.TestAutomation.Reporting.pdb" />
+		<file src="bin\Release\DeftPack.TestAutomation.dll" target="lib\net45\DeftPack.TestAutomation.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.pdb" target="lib\net45\DeftPack.TestAutomation.pdb" />
+        <file src="bin\Release\DeftPack.TestAutomation.Reporting.dll" target="lib\net45\DeftPack.TestAutomation.Reporting.dll" />
+        <file src="bin\Release\DeftPack.TestAutomation.Reporting.pdb" target="lib\net45\DeftPack.TestAutomation.Reporting.pdb" />
         <file src="**\*.cs" exclude="bin\**\*.cs;obj\**\*.cs;Properties\**\*.cs" target="src" />
 		<file src="**\*.css" exclude="bin\**\*.css;obj\**\*.css;Properties\**\*.css" target="src" />
 		<file src="**\*.html" exclude="bin\**\*.html;obj\**\*.html;Properties\**\*.html" target="src" />
