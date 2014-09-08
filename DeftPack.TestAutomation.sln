@@ -4,10 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Functional", "Libraries\DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj", "{D3FE6FAF-4A82-4F52-9D99-8189A1499E63}"
+	ProjectSection(ProjectDependencies) = postProject
+		{509C1615-5A42-4AF7-863D-87A68C68AB6F} = {509C1615-5A42-4AF7-863D-87A68C68AB6F}
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC} = {A4590BAD-8E29-4A0F-8C67-FC87109A11DC}
+		{F4A3E8FB-765A-4117-A55A-8B980961447D} = {F4A3E8FB-765A-4117-A55A-8B980961447D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium", "Libraries\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj", "{38731F5C-8555-4CFB-886C-0E103B67CE27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Examples.Functional", "Examples\DeftPack.TestAutomation.Examples.Functional\DeftPack.TestAutomation.Examples.Functional.csproj", "{CF34D149-D04F-4646-85B2-B56EE5DC8B83}"
+	ProjectSection(ProjectDependencies) = postProject
+		{509C1615-5A42-4AF7-863D-87A68C68AB6F} = {509C1615-5A42-4AF7-863D-87A68C68AB6F}
+		{CE59C824-C745-4681-9700-809EAEB97D99} = {CE59C824-C745-4681-9700-809EAEB97D99}
+		{FCBD6357-619F-4B68-B7C0-0081923A2256} = {FCBD6357-619F-4B68-B7C0-0081923A2256}
+		{A4590BAD-8E29-4A0F-8C67-FC87109A11DC} = {A4590BAD-8E29-4A0F-8C67-FC87109A11DC}
+		{D3FE6FAF-4A82-4F52-9D99-8189A1499E63} = {D3FE6FAF-4A82-4F52-9D99-8189A1499E63}
+		{F4A3E8FB-765A-4117-A55A-8B980961447D} = {F4A3E8FB-765A-4117-A55A-8B980961447D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting", "Libraries\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj", "{A4590BAD-8E29-4A0F-8C67-FC87109A11DC}"
 EndProject
