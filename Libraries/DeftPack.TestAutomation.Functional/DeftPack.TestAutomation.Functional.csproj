@@ -34,19 +34,11 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="DeftPack.TestAutomation">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Reporting">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.Reporting.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Selenium.PageObjects">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Selenium.PageObjects.0.2.0\lib\DeftPack.TestAutomation.Selenium.PageObjects.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine">
+    <Reference Include="RazorEngine, Version=3.4.1.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\RazorEngine.3.4.1\lib\net45\RazorEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -57,10 +49,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver">
+    <Reference Include="WebDriver, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Selenium.WebDriver.2.42.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support">
+    <Reference Include="WebDriver.Support, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Selenium.Support.2.42.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -79,9 +73,21 @@
     <Compile Include="TestScreenshotSaver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj">
+      <Project>{a4590bad-8e29-4a0f-8c67-fc87109a11dc}</Project>
+      <Name>DeftPack.TestAutomation.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
+      <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
       <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>
       <Name>DeftPack.TestAutomation.Selenium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeftPack.TestAutomation\DeftPack.TestAutomation.csproj">
+      <Project>{ce59c824-c745-4681-9700-809eaeb97d99}</Project>
+      <Name>DeftPack.TestAutomation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
