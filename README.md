@@ -7,3 +7,4 @@ Test Automation Pack utilizing Selenium
 * [Project](http://testautomation.deftpack.com) (or [here](http://testautomation.deftpack.co.uk))
 * [Board](http://board.testautomation.deftpack.com) (or [here](http://board.testautomation.deftpack.co.uk))
 * [Slack](http://slack.testautomation.deftpack.com) (or [here](http://slack.testautomation.deftpack.co.uk))
+* [Packages](https://www.myget.org/F/deftpack/) ([web](https://www.myget.org/feed/Packages/deftpack))
