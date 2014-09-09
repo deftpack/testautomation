@@ -6,11 +6,13 @@ Test Automation
 [![Join](http://img.shields.io/badge/slack-Join Here-green.svg)](https://deftpack.slack.com)
 [![Fund for more packages](http://img.shields.io/gittip/deftpack.svg)](https://gratipay.com/deftpack/)
 
-Functional : [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Functional.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Functional)  
-Assertion : [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Assertion.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Assertion)  
-Reporting : [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Reporting.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Reporting)  
-Page Objects: [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Selenium.PageObjects.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Selenium.PageObjects)  
-Drivers : [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Selenium.Drivers.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Selenium.Drivers)  
+Project | Version 
+--- | :---: 
+Functional | [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Functional.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Functional)
+Assertion | [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Assertion.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Assertion)
+Reporting | [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Reporting.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Reporting)
+Page Objects | [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Selenium.PageObjects.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Selenium.PageObjects)
+Drivers | [![NuGet Packages](http://img.shields.io/myget/deftpack/v/DeftPack.TestAutomation.Selenium.Drivers.svg)](https://www.myget.org/feed/deftpack/package/DeftPack.TestAutomation.Selenium.Drivers)
 
 Test Automation Pack utilizing Selenium
 
