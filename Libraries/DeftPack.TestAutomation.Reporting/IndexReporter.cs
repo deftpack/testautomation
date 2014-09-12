@@ -48,7 +48,7 @@ namespace DeftPack.TestAutomation.Reporting
             _testSuiteReport.TimeSpent = _stopwatch.Elapsed;
             _testSuiteReport.FailCount = _testSummaries.Count(ts => !ts.Status);
             _testSuiteReport.PassCount = _testSummaries.Count - _testSuiteReport.FailCount;
-            _testSuiteReport.TestSummaries = string.Join(string.Empty, _testSummaries.Select(sr => _templateEngine.GetContent(sr)));
+            _testSuiteReport.TestSummaries = string.Join(Environment.NewLine, _testSummaries.Select(sr => _templateEngine.GetContent(sr)));
 
             _reportSaver.Save(IndexFileName, _templateEngine.GetContent(_testSuiteReport));
         }

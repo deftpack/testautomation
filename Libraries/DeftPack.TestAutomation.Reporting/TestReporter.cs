@@ -56,7 +56,7 @@ namespace DeftPack.TestAutomation.Reporting
             _testReport.TimeSpent = _stopwatch.Elapsed;
             _testReport.Status = isAllStepsPassed;
             _testReport.StepResults = string.Join(
-                string.Empty,
+                Environment.NewLine,
                 _stepReports.Select(sr => _templateEngine.GetContent(sr)));
             _reportSaver.Save(_testReport.TestCaseName, _templateEngine.GetContent(_testReport));
 
