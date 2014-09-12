@@ -39,24 +39,6 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="DeftPack.TestAutomation">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Assertion">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Assertion.0.2.0\lib\DeftPack.TestAutomation.Assertion.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Functional">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Functional.0.2.0\lib\DeftPack.TestAutomation.Functional.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Reporting">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Reporting.0.2.0\lib\DeftPack.TestAutomation.Reporting.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Selenium">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Functional.0.2.0\lib\DeftPack.TestAutomation.Selenium.dll</HintPath>
-    </Reference>
-    <Reference Include="DeftPack.TestAutomation.Selenium.PageObjects">
-      <HintPath>..\..\packages\DeftPack.TestAutomation.Selenium.PageObjects.0.2.0\lib\DeftPack.TestAutomation.Selenium.PageObjects.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -102,19 +84,34 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\packages\DeftPack.TestAutomation.Selenium.Drivers.1.0.0\tools\drivers\chromedriver.exe">
-      <Link>chromedriver.exe</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\packages\DeftPack.TestAutomation.Selenium.Drivers.1.0.0\tools\drivers\IEDriverServer.exe">
-      <Link>IEDriverServer.exe</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\packages\DeftPack.TestAutomation.Selenium.Drivers.1.0.0\tools\drivers\phantomjs.exe">
-      <Link>phantomjs.exe</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="phantomjs-license.txt" />
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Assertion\DeftPack.TestAutomation.Assertion.csproj">
+      <Project>{509c1615-5a42-4af7-863d-87a68c68ab6f}</Project>
+      <Name>DeftPack.TestAutomation.Assertion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Functional\DeftPack.TestAutomation.Functional.csproj">
+      <Project>{d3fe6faf-4a82-4f52-9d99-8189a1499e63}</Project>
+      <Name>DeftPack.TestAutomation.Functional</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Reporting\DeftPack.TestAutomation.Reporting.csproj">
+      <Project>{a4590bad-8e29-4a0f-8c67-fc87109a11dc}</Project>
+      <Name>DeftPack.TestAutomation.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Selenium.Drivers\DeftPack.TestAutomation.Selenium.Drivers.csproj">
+      <Project>{fcbd6357-619f-4b68-b7c0-0081923a2256}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.Drivers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
+      <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
+      <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Selenium\DeftPack.TestAutomation.Selenium.csproj">
+      <Project>{38731f5c-8555-4cfb-886c-0e103b67ce27}</Project>
+      <Name>DeftPack.TestAutomation.Selenium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation\DeftPack.TestAutomation.csproj">
+      <Project>{ce59c824-c745-4681-9700-809eaeb97d99}</Project>
+      <Name>DeftPack.TestAutomation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
