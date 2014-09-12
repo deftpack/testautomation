@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Browser.cs" />
     <Compile Include="WebDriverConfiguration.cs" />
+    <Compile Include="WebDriverDebuggingConfiguration.cs" />
     <Compile Include="WebDriverNavigationExtensions.cs" />
     <Compile Include="WebDriverFactory.cs" />
     <Compile Include="WebDriverNotFoundException.cs" />

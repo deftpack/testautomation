@@ -50,16 +50,27 @@ namespace DeftPack.TestAutomation.Selenium
 
                         var driverOptions = new PhantomJSOptions();
 
-                        if (_configuration != null && _configuration.DebuggingPort > 0)
+                        if (_configuration != null)
                         {
-                            driverService.AddArgument(string.Format("--remote-debugger-port={0}",
-                                _configuration.DebuggingPort));
-                        }
+                            if (_configuration.Debugging != null)
+                            {
+                                if (!string.IsNullOrWhiteSpace(_configuration.Debugging.LogFileFullPath))
+                                {
+                                    driverService.LogFile = _configuration.Debugging.LogFileFullPath;
+                                }
 
-                        if (_configuration != null && !string.IsNullOrWhiteSpace(_configuration.UserAgent))
-                        {
-                            driverOptions.AddAdditionalCapability("phantomjs.page.settings.userAgent",
-                                _configuration.UserAgent);
+                                if (_configuration.Debugging.Port > 0)
+                                {
+                                    driverService.AddArgument(string.Format("--remote-debugger-port={0}",
+                                        _configuration.Debugging.Port));
+                                }
+                            }
+
+                            if (!string.IsNullOrWhiteSpace(_configuration.UserAgent))
+                            {
+                                driverOptions.AddAdditionalCapability("phantomjs.page.settings.userAgent",
+                                    _configuration.UserAgent);
+                            }
                         }
 
                         return new PhantomJSDriver(driverService, driverOptions);

@@ -25,25 +25,18 @@ namespace DeftPack.TestAutomation.Selenium
             set { this["defaultBrowser"] = value; }
         }
 
-        [ConfigurationProperty("defaultDriverWaitSeconds", DefaultValue = 5, IsRequired = false)]
-        public int DefaultDriverWaitSeconds
-        {
-            get { return (int)this["defaultDriverWaitSeconds"]; }
-            set { this["defaultDriverWaitSeconds"] = value; }
-        }
-
-        [ConfigurationProperty("debuggingPort", DefaultValue = 0, IsRequired = false)]
-        public int DebuggingPort
-        {
-            get { return (int)this["debuggingPort"]; }
-            set { this["debuggingPort"] = value; }
-        }
-
         [ConfigurationProperty("userAgent", DefaultValue = "", IsRequired = false)]
         public string UserAgent
         {
             get { return (string)this["userAgent"]; }
             set { this["userAgent"] = value; }
+        }
+
+        [ConfigurationProperty("debugging", DefaultValue = null, IsRequired = false)]
+        public WebDriverDebuggingConfiguration Debugging
+        {
+            get { return (WebDriverDebuggingConfiguration)this["debugging"]; }
+            set { this["debugging"] = value; }
         }
 
         public static WebDriverConfiguration Config
