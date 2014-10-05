@@ -58,9 +58,6 @@
     <Compile Include="TestReporter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Style\report_theme.css" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Templates\StepReport.html" />
   </ItemGroup>
   <ItemGroup>

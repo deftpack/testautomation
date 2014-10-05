@@ -1,38 +1,50 @@
 ﻿<html>
-    <head>
-        <title>@Model.Title</title>
-        <link rel="stylesheet" type="text/css" href="Content/report_theme.css" />
-    </head>
-    <body>
-        <h1>@Model.Title</h1>
-        <h2><span id="execution-date">@Model.ExecutionDate</span></h2>
-        <table id="test-summaries">
-            <thead>
-                <tr>
-                    <td class="test-sum-col-num">#</td>
-                    <td class="test-sum-col-name">Name</td>
-                    <td class="test-sum-col-desc">Description</td>
-                    <td class="test-sum-col-status">Status</td>
-                </tr>
-            </thead>
-            <tbody>@Raw(Model.TestSummaries)</tbody>
-        </table>
-        <table id="test-suite-summary">
-            <thead>
-                <tr><td colspan="8">Summary</td></tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="test-suite-summary-label">Total</td>
-                    <td class="test-suite-summary-value">@(Model.PassCount + Model.FailCount)</td>
-                    <td class="test-suite-summary-label">Passed</td>
-                    <td class="test-suite-summary-value">@Model.PassCount</td>
-                    <td class="test-suite-summary-label">Failed</td>
-                    <td class="test-suite-summary-value">@Model.FailCount</td>
-                    <td class="test-suite-summary-label">Execution Time</td>
-                    <td class="test-suite-summary-value">@Model.TimeSpent.ToString("hh\\:mm\\:ss")</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+<head>
+    <title>@Model.Title</title>
+    <link href="http://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
+    <style>.clickable {cursor: pointer;} .vcenter {vertical-align: middle !important;}</style>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand vcenter" href="index.html">@Model.Title</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-default-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>@Model.ExecutionDate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover" style="margin-bottom: 0;">
+                <thead>
+                    <tr>
+                        <td class="text-center"><strong>#</strong></td>
+                        <td class="text-left"><strong>Name</strong></td>
+                        <td class="text-left"><strong>Description</strong></td>
+                        <td class="text-center"><strong>Status</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Raw(Model.TestSummaries)
+                </tbody>
+            </table>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="text-right">Total</td>
+                        <td class="text-left"><strong>@(Model.PassCount + Model.FailCount)</strong></td>
+                        <td class="text-right">Passed</td>
+                        <td class="text-left"><strong>@Model.PassCount</strong></td>
+                        <td class="text-right">Failed</td>
+                        <td class="text-left"><strong>@Model.FailCount</strong></td>
+                        <td class="text-right">Execution Time</td>
+                        <td class="text-left"><strong>@Model.TimeSpent.ToString("hh\\:mm\\:ss")</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
 </html>

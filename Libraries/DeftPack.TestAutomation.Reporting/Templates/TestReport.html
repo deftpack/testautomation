@@ -1,40 +1,47 @@
-﻿@{
-    var screenShotFileName = string.Format("Screenshots/{0}_{1}.png", Model.TestCaseName, Model.Status ? "passed" : "failed");
-}
+﻿@{ var screenShotFileName = string.Format("Screenshots/{0}_{1}.png", Model.TestCaseName, Model.Status ? "passed" : "failed"); }
 <html>
-    <head>
-        <title>@Model.Title</title>
-        <link rel="stylesheet" type="text/css" href="Content/report_theme.css" />
-    </head>
-    <body>
-        <h1 onclick="window.location.href = 'index.html';" class="navigate-back">@Model.Title</h1>
-        <h2>@Model.ExecutionDate</h2>
-        <h3>@Model.TestCaseName<span id="screenshot-icon" onclick="window.location.href = '@screenShotFileName';"></span></h3>
-        <div id="test-description">@Model.TestDescription</div>
-        <table id="test-steps">
-            <thead>
-                <tr>
-                    <td class="step-sum-col-num">#</td>
-                    <td class="step-sum-col-name">Step Description</td>
-                    <td class="step-sum-col-exp">Expected Result</td>
-                    <td class="step-sum-col-act">Actual Result</td>
-                    <td class="step-sum-col-status">Status</td>
-                </tr>
-            </thead>
-            <tbody>@Raw(Model.StepResults)</tbody>
-        </table>
-        <table id="test-summary">
-            <thead>
-                <tr>
-                    <td colspan="2">Test Summary</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="test-summary-label">Execution Time</td>
-                    <td class="test-summary-value">@Model.TimeSpent.ToString("hh\\:mm\\:ss")</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+<head>
+    <title>@Model.Title</title>
+    <link href="http://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
+    <style>.vcenter {vertical-align: middle !important;}</style>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand vcenter" href="index.html">@Model.Title</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-default-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="@screenShotFileName">Screenshot</a></li>
+                <li><a>@Model.ExecutionDate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h1>@Model.TestCaseName</h1>
+        <div class="well well-sm">@Model.TestDescription</div>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td class="text-center"><strong>#</strong></td>
+                        <td class="text-left"><strong>Step Description</strong></td>
+                        <td class="text-left"><strong>Expected Result</strong></td>
+                        <td class="text-left"><strong>Actual Result</strong></td>
+                        <td class="text-center"><strong>Status</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Raw(Model.StepResults)
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">Execution Time</td>
+                        <td colspan="1" class="text-center"><strong>@Model.TimeSpent.ToString("hh\\:mm\\:ss")</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
 </html>

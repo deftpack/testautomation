@@ -1,11 +1,13 @@
 ﻿@{
     var fileName = string.Format("{0}.html", Model.Name);
     var statusName = @Model.Status ? "passed" : "failed";
+    var labelClass = @Model.Status ? "success" : "danger";
 }
-
-<tr onclick="window.location.href = '@fileName';" class="test-@statusName">
-    <td class="test-sum-col-num">@Model.Number</td>
-    <td class="test-sum-col-name">@Model.Name</td>
-    <td class="test-sum-col-desc">@Model.Description</td>
-    <td class="test-sum-col-status"><span class="status-text">@statusName</span></td>
+<tr class="clickable" onclick="window.location.href = '@fileName';">
+    <td class="text-center">@Model.Number</td>
+    <td class="text-left">@Model.Name</td>
+    <td class="text-left">@Model.Description</td>
+    <td class="text-center vcenter">
+        <span class="label label-@labelClass">@statusName</span>
+    </td>
 </tr>

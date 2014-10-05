@@ -1,11 +1,13 @@
 ﻿@{
     var statusName = @Model.StepStatus ? "passed" : "failed";
+    var labelClass = @Model.StepStatus ? "success" : "danger";
 }
-
-<tr class="test-step-@statusName">
-    <td class="step-sum-col-num">@Model.StepNumber</td>
-    <td class="step-sum-col-name">@Model.StepName</td>
-    <td class="step-sum-col-exp">@Model.ExpectedResult</td>
-    <td class="step-sum-col-act">@Model.ActualResult</td>
-    <td class="step-sum-col-status"><span class="status-text">@statusName</span></td>
+<tr>
+    <td class="text-center">@Model.StepNumber</td>
+    <td class="text-left">@Model.StepName</td>
+    <td class="text-left">@Model.ExpectedResult</td>
+    <td class="text-left">@Model.ActualResult</td>
+    <td class="text-center vcenter">
+        <span class="label label-@labelClass">@statusName</span>
+    </td>
 </tr>
