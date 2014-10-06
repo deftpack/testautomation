@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting.UnitTests", "UnitTests\DeftPack.TestAutomation.Reporting.UnitTests\DeftPack.TestAutomation.Reporting.UnitTests.csproj", "{4A4CC689-9D8A-447C-B592-0CABD1692DAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects.UnitTests", "DeftPack.TestAutomation.Selenium.PageObjects.UnitTests\DeftPack.TestAutomation.Selenium.PageObjects.UnitTests.csproj", "{6D16B18C-7BD6-4568-8A02-AF322228467E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{4A4CC689-9D8A-447C-B592-0CABD1692DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4CC689-9D8A-447C-B592-0CABD1692DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4CC689-9D8A-447C-B592-0CABD1692DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D16B18C-7BD6-4568-8A02-AF322228467E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D16B18C-7BD6-4568-8A02-AF322228467E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D16B18C-7BD6-4568-8A02-AF322228467E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D16B18C-7BD6-4568-8A02-AF322228467E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,5 +111,6 @@ Global
 		{FCBD6357-619F-4B68-B7C0-0081923A2256} = {C8833316-2DBB-4779-AB20-FD0701EE0D50}
 		{69F4EFEA-0C4C-4917-A637-3BE0CC7A695A} = {8B7A2670-D69C-42C9-BFE4-5497A615933A}
 		{4A4CC689-9D8A-447C-B592-0CABD1692DAD} = {8B7A2670-D69C-42C9-BFE4-5497A615933A}
+		{6D16B18C-7BD6-4568-8A02-AF322228467E} = {8B7A2670-D69C-42C9-BFE4-5497A615933A}
 	EndGlobalSection
 EndGlobal
