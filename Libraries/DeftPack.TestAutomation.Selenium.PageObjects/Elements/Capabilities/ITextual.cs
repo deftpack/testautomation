@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Capabilities
+﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities
 {
     public interface ITextual : IElement
     {

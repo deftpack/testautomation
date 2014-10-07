@@ -1,4 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Capabilities;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,8 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
     public abstract class Wrapper : Element, IContainer
     {
-        protected Wrapper(IWebElement proxyObject, IEnumerable<IElement> childs) : base(proxyObject)
+        protected Wrapper(IWebElement proxyObject, IEnumerable<IElement> childs)
+            : base(proxyObject)
         {
             ChildElements = childs;
         }

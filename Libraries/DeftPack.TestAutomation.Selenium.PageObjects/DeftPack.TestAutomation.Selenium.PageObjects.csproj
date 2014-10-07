@@ -47,19 +47,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Capabilities\IClickable.cs" />
-    <Compile Include="Capabilities\IContainer.cs" />
-    <Compile Include="Capabilities\IEditable.cs" />
-    <Compile Include="Capabilities\IPlayable.cs" />
-    <Compile Include="Capabilities\ISelectable.cs" />
-    <Compile Include="Capabilities\ITextual.cs" />
-    <Compile Include="Capabilities\IUploader.cs" />
+    <Compile Include="Elements\Capabilities\IClickable.cs" />
+    <Compile Include="Elements\Capabilities\IContainer.cs" />
+    <Compile Include="Elements\Capabilities\IEditable.cs" />
+    <Compile Include="Elements\Capabilities\IPlayable.cs" />
+    <Compile Include="Elements\Capabilities\ISelectable.cs" />
+    <Compile Include="Elements\Capabilities\ITextual.cs" />
+    <Compile Include="Elements\Capabilities\IUploader.cs" />
     <Compile Include="DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />
     <Compile Include="Elements\Containers\Form.cs" />
     <Compile Include="Elements\Containers\Frame.cs" />
-    <Compile Include="ElementFactory.cs" />
+    <Compile Include="Elements\ElementFactory.cs" />
     <Compile Include="Elements\Wrapper.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Elements\Inputs\CheckBox.cs" />
@@ -77,9 +77,11 @@
     <Compile Include="Elements\Table\TableRow.cs" />
     <Compile Include="Elements\Table\Table.cs" />
     <Compile Include="CheckViewUrlAttribute.cs" />
+    <Compile Include="Elements\ElementTypeFinder.cs" />
+    <Compile Include="Elements\IElementTypeFinder.cs" />
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
-    <Compile Include="IElement.cs" />
+    <Compile Include="Elements\IElement.cs" />
     <Compile Include="View.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />

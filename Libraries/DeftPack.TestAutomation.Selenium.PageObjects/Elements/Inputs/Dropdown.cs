@@ -1,4 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Capabilities;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
 using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;

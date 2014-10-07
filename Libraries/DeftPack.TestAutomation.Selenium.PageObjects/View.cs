@@ -71,13 +71,13 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects
 
         protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
         {
-            return _elementFactory.Create<TElement>(WebDriver, builderFunc().Selector);
+            return _elementFactory.Create<TElement>(WebDriver.jQueryElement(builderFunc().Selector));
         }
 
         protected TElement QueryElement<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc) where TElement : Element
         {
             var selector = string.Join(", ", _selectorBuilderFactory.Create<TElement>(builderFunc).Select(x => x.Selector));
-            return _elementFactory.Create<TElement>(WebDriver, selector);
+            return _elementFactory.Create<TElement>(WebDriver.jQueryElement(selector));
         }
 
         private bool IsUrlMatching
