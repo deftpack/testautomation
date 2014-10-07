@@ -82,6 +82,7 @@
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="Elements\IElement.cs" />
+    <Compile Include="Views\ElementProvider.cs" />
     <Compile Include="Views\View.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
     <Compile Include="Selectors\StringExtension.cs" />
+    <Compile Include="Views\ViewBase.cs" />
     <Compile Include="Views\ViewFactory.cs" />
     <Compile Include="WebDriverExtensions\WebDriverErrorHandlingExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverJavaScriptExtensions.cs" />
