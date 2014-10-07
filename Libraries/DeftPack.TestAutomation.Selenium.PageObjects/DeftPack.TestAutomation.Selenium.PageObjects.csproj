@@ -54,7 +54,7 @@
     <Compile Include="Elements\Capabilities\ISelectable.cs" />
     <Compile Include="Elements\Capabilities\ITextual.cs" />
     <Compile Include="Elements\Capabilities\IUploader.cs" />
-    <Compile Include="DynamicElementAttribute.cs" />
+    <Compile Include="MetaInformation\DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />
     <Compile Include="Elements\Containers\Form.cs" />
@@ -76,31 +76,31 @@
     <Compile Include="Elements\Table\TableHeader.cs" />
     <Compile Include="Elements\Table\TableRow.cs" />
     <Compile Include="Elements\Table\Table.cs" />
-    <Compile Include="CheckViewUrlAttribute.cs" />
+    <Compile Include="Views\CheckViewUrlAttribute.cs" />
     <Compile Include="Elements\ElementTypeFinder.cs" />
     <Compile Include="Elements\IElementTypeFinder.cs" />
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="Elements\IElement.cs" />
-    <Compile Include="View.cs" />
+    <Compile Include="Views\View.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />
     <Compile Include="MetaInformation\InputTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
-    <Compile Include="StringExtension.cs" />
-    <Compile Include="ViewFactory.cs" />
+    <Compile Include="Selectors\StringExtension.cs" />
+    <Compile Include="Views\ViewFactory.cs" />
     <Compile Include="WebDriverExtensions\WebDriverErrorHandlingExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverJavaScriptExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverPageExtensions.cs" />
     <Compile Include="WebDriverExtensions\WebDriverQueryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClientSideHelpers\jQueryLoader.js" />
+    <EmbeddedResource Include="WebDriverExtensions\ClientSideHelpers\jQueryLoader.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClientSideHelpers\ErrorHarvester.js" />
+    <EmbeddedResource Include="WebDriverExtensions\ClientSideHelpers\ErrorHarvester.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

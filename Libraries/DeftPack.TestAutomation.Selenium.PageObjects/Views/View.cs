@@ -1,4 +1,5 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
+using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using DeftPack.TestAutomation.Selenium.PageObjects.Selectors;
 using DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions;
 using OpenQA.Selenium;
@@ -8,7 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
 {
     public abstract class View : IDisposable
     {

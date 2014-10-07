@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
 {
     public class ViewFactory
     {

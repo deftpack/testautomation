@@ -6,7 +6,8 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
     {
         internal static void InitilaizejQuery(this IWebDriver webDriver)
         {
-            webDriver.LoadJavaScriptLibray("DeftPack.TestAutomation.Selenium.PageObjects.ClientSideHelpers.jQueryLoader.js");
+            webDriver.LoadJavaScriptLibray(
+                "DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions.ClientSideHelpers.jQueryLoader.js");
         }
 
         internal static IWebElement jQueryElement(this IWebDriver webDriver, string selector)

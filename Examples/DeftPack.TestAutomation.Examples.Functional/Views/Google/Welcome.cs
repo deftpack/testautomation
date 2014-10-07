@@ -1,6 +1,8 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
+using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+using DeftPack.TestAutomation.Selenium.PageObjects.Views;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.Google
 {

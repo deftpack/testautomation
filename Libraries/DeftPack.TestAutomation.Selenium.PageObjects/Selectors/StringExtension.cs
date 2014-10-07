@@ -1,7 +1,7 @@
 ﻿
 using System.Linq;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
 {
     internal static class StringExtension
     {

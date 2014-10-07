@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class CheckViewUrlAttribute : Attribute

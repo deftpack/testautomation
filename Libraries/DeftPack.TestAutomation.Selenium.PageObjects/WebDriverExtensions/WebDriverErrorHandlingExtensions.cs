@@ -7,7 +7,8 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions
     {
         internal static void InitilaizeJavaScriptErrorHarvester(this IWebDriver webDriver)
         {
-            webDriver.LoadJavaScriptLibray("DeftPack.TestAutomation.Selenium.PageObjects.ClientSideHelpers.ErrorHarvester.js");
+            webDriver.LoadJavaScriptLibray(
+                "DeftPack.TestAutomation.Selenium.PageObjects.WebDriverExtensions.ClientSideHelpers.ErrorHarvester.js");
         }
 
         internal static IEnumerable<string> GetJavaScriptErrorMessages(this IWebDriver webDriver)
