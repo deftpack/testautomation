@@ -17,7 +17,10 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 
         public string GetText()
         {
-            return string.Join(" ", ChildElements.OfType<ITextual>().Select(x => x.Text));
+            var texts = new List<string> { ProxyObject.Text };
+            texts.AddRange(ChildElements.OfType<ITextual>().Select(x => x.Text));
+            texts = texts.Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+            return texts.Any() ? string.Join(string.Empty, texts) : string.Empty;
         }
     }
 }

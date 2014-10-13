@@ -11,7 +11,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
     {
         internal IWebDriver _webDriver;
         private readonly SelectorBuilderFactory _selectorBuilderFactory = new SelectorBuilderFactory();
-        private readonly ElementFactory _elementFactory = new ElementFactory();
+        private readonly IElementFactory _elementFactory = new ElementFactory(new ElementTypeFinder());
 
         protected ISelectorBuilder Any
         {

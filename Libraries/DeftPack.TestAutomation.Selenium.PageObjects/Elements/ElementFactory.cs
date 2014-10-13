@@ -1,47 +1,55 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
-    public class ElementFactory
+    public class ElementFactory : IElementFactory
     {
-        private readonly IElementTypeFinder _typeFinder = new ElementTypeFinder();
-        private readonly IDictionary<Type, string> _tableChildSelectors = new Dictionary<Type, string>
+        private readonly IElementTypeFinder _typeFinder;
+
+        public ElementFactory(IElementTypeFinder typeFinder)
         {
-            {typeof (Table.Table), "thead, tbody, tfoot"},
-            {typeof (TableRow), "td, th"},
-            {typeof (TableHeader), "tr"},
-            {typeof (TableBody), "tr"},
-            {typeof (TableFooter), "tr"},
-        };
+            _typeFinder = typeFinder;
+        }
 
         public TElement Create<TElement>(IWebElement webElement) where TElement : Element
         {
-            string selector = null;
-            var elementType = typeof(TElement);
             if (webElement == null) return null;
+            var elementType = typeof(TElement);
 
-            if (_tableChildSelectors.ContainsKey(elementType)) selector = _tableChildSelectors[elementType];
-            else if (elementType.IsSubclassOf(typeof(Wrapper))) selector = "*";
+            if (elementType == typeof(Table.Table))
+                return (TElement)CreateTable(webElement);
+            if (elementType == typeof(TableRow))
+                return CreateWrapper<TElement, TableCell>(webElement, "td, th");
+            if (new[] { typeof(TableHeader), typeof(TableBody), typeof(TableFooter) }.Contains(elementType))
+                return CreateWrapper<TElement, TableRow>(webElement, "tr");
 
-            return CreateElement<TElement>(webElement, selector);
+            return elementType.IsSubclassOf(typeof(Wrapper)) ?
+                CreateWrapper<TElement, IElement>(webElement, "*") :
+                (TElement)Activator.CreateInstance(typeof(TElement), webElement);
         }
 
-        private TElement CreateElement<TElement>(IWebElement webElement, string childCssSelector = null)
+        private TElement CreateWrapper<TElement, TChild>(IWebElement webElement, string cssSelector) where TChild : class
         {
-            var childElements = string.IsNullOrWhiteSpace(childCssSelector) ? null : webElement
-                .FindElements(By.CssSelector(childCssSelector)).Select(element =>
-                {
-                    var elementType = _typeFinder.Find(element);
-                    return elementType == null ? null : (IElement)(typeof(ElementFactory).GetMethod("Create")
-                            .MakeGenericMethod(elementType).Invoke(this, new object[] { element }));
-                }).Where(element => element != null).ToList();
+            var childElements = webElement.FindElements(By.CssSelector(cssSelector))
+                .Select(CreateChildElement<TChild>).Where(element => element != null).ToList();
+            return (TElement)Activator.CreateInstance(typeof(TElement), webElement, childElements);
+        }
 
-            var parameters = childElements == null ? null : childElements.Any() ? childElements : null;
-            return (TElement)Activator.CreateInstance(typeof(TElement), webElement, parameters);
+        private TElement CreateChildElement<TElement>(IWebElement element) where TElement : class
+        {
+            var elementType = _typeFinder.Find(element);
+            return elementType == null ? null : (TElement)(GetType().GetMethod("Create")
+                    .MakeGenericMethod(elementType).Invoke(this, new object[] { element }));
+        }
+        private object CreateTable(IWebElement webElement)
+        {
+            return new Table.Table(webElement,
+                Create<TableBody>(webElement.FindElement(By.CssSelector("tbody"))),
+                Create<TableHeader>(webElement.FindElement(By.CssSelector("thead"))),
+                Create<TableFooter>(webElement.FindElement(By.CssSelector("tfoot"))));
         }
     }
 }

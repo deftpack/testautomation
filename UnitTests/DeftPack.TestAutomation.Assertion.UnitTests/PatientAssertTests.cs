@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace DeftPack.TestAutomation.Assertion.UnitTests
 {
+    [TestFixture]
     public class PatientAssertTests
     {
         [Test]

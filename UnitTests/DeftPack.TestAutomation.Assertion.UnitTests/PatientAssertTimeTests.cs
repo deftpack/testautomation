@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace DeftPack.TestAutomation.Assertion.UnitTests
 {
+    [TestFixture]
     [Ignore]
     public class PatientAssertTimeTests
     {

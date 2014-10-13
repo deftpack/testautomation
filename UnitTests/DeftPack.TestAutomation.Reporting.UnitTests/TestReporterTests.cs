@@ -8,6 +8,7 @@ using System.Linq;
 
 namespace DeftPack.TestAutomation.Reporting.UnitTests
 {
+    [TestFixture]
     public class TestReporterTests
     {
         private string _reportContent;
@@ -19,7 +20,7 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
         {
             _reportSaver
                 .Setup(rs => rs.Save(It.IsAny<string>(), It.IsAny<string>()))
-                .Callback<string, string>((name,content) => _reportContent = content);
+                .Callback<string, string>((name, content) => _reportContent = content);
             _templateEngine.Setup(te => te.GetContent(It.IsAny<StepReport>())).Returns<StepReport>(ToString);
             _templateEngine.Setup(te => te.GetContent(It.IsAny<TestReport>())).Returns<TestReport>(ToString);
         }
@@ -45,13 +46,17 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
 
             var testReport = new TestReport
             {
-                ExecutionDate = DateTime.Now, Status = true, TestCaseName = "Name", Title = "Title", 
-                TestDescription = "Description", StepResults = string.Join(Environment.NewLine, steps.Select(ToString))
+                ExecutionDate = DateTime.Now,
+                Status = true,
+                TestCaseName = "Name",
+                Title = "Title",
+                TestDescription = "Description",
+                StepResults = string.Join(Environment.NewLine, steps.Select(ToString))
             };
 
             using (
                 var reporter = new TestReporter(testReport.Title, testReport.ExecutionDate,
-                    new TestSummary {Description = testReport.TestDescription, Name = testReport.TestCaseName},
+                    new TestSummary { Description = testReport.TestDescription, Name = testReport.TestCaseName },
                     _reportSaver.Object, _templateEngine.Object))
             {
                 reporter.ReportStep(steps[0].StepName, steps[0].ExpectedResult, steps[0].ActualResult, steps[0].StepStatus);
@@ -112,8 +117,8 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
 
         private string ToString(TestReport stepReport)
         {
-            return string.Format("{0}|{1}|{2}|{3}|{4}\n{5}", stepReport.Title, 
-                stepReport.TestCaseName, stepReport.TestDescription, stepReport.ExecutionDate, 
+            return string.Format("{0}|{1}|{2}|{3}|{4}\n{5}", stepReport.Title,
+                stepReport.TestCaseName, stepReport.TestDescription, stepReport.ExecutionDate,
                 stepReport.Status, stepReport.StepResults);
         }
     }

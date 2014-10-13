@@ -4,6 +4,7 @@ using System;
 
 namespace DeftPack.TestAutomation.Assertion.UnitTests
 {
+    [TestFixture]
     public class RetryTests
     {
         private const int WaitTime = 100;

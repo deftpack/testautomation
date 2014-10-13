@@ -54,6 +54,7 @@
     <Compile Include="Elements\Capabilities\ISelectable.cs" />
     <Compile Include="Elements\Capabilities\ITextual.cs" />
     <Compile Include="Elements\Capabilities\IUploader.cs" />
+    <Compile Include="Elements\IElementFactory.cs" />
     <Compile Include="MetaInformation\DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />

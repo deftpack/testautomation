@@ -8,6 +8,7 @@ using System.Linq;
 
 namespace DeftPack.TestAutomation.Reporting.UnitTests
 {
+    [TestFixture]
     public class IndexReporterTests
     {
         private string _reportContent;
@@ -19,7 +20,7 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
         {
             _reportSaver
                 .Setup(rs => rs.Save(It.IsAny<string>(), It.IsAny<string>()))
-                .Callback<string, string>((name,content) => _reportContent = content);
+                .Callback<string, string>((name, content) => _reportContent = content);
             _templateEngine.Setup(te => te.GetContent(It.IsAny<Models.TestSummary>())).Returns<Models.TestSummary>(ToString);
             _templateEngine.Setup(te => te.GetContent(It.IsAny<TestSuiteReport>())).Returns<TestSuiteReport>(ToString);
         }
@@ -48,15 +49,21 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
             {
                 reporter.HandleFinishedTestReport(null, new TestReporterFinishedEventArgs
                 {
-                    TestName = tests[0].Name,TestDescription = tests[0].Description, TestStatus = tests[0].Status
+                    TestName = tests[0].Name,
+                    TestDescription = tests[0].Description,
+                    TestStatus = tests[0].Status
                 });
                 reporter.HandleFinishedTestReport(null, new TestReporterFinishedEventArgs
                 {
-                    TestName = tests[1].Name, TestDescription = tests[1].Description, TestStatus = tests[1].Status
+                    TestName = tests[1].Name,
+                    TestDescription = tests[1].Description,
+                    TestStatus = tests[1].Status
                 });
                 reporter.HandleFinishedTestReport(null, new TestReporterFinishedEventArgs
                 {
-                    TestName = tests[2].Name, TestDescription = tests[2].Description, TestStatus = tests[2].Status
+                    TestName = tests[2].Name,
+                    TestDescription = tests[2].Description,
+                    TestStatus = tests[2].Status
                 });
             }
 
@@ -70,7 +77,7 @@ namespace DeftPack.TestAutomation.Reporting.UnitTests
 
         private string ToString(TestSuiteReport suiteReport)
         {
-            return string.Format("{0}|{1}|{2}|{3}\n{4}", suiteReport.Title, suiteReport.PassCount, suiteReport.FailCount, 
+            return string.Format("{0}|{1}|{2}|{3}\n{4}", suiteReport.Title, suiteReport.PassCount, suiteReport.FailCount,
                 suiteReport.ExecutionDate, suiteReport.TestSummaries);
         }
     }

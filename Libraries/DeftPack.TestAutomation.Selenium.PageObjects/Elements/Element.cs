@@ -12,6 +12,11 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
             ProxyObject = proxyObject;
         }
 
+        public string TagName
+        {
+            get { return ProxyObject.TagName; }
+        }
+
         public string Id
         {
             get { return ProxyObject.GetAttribute("id"); }
