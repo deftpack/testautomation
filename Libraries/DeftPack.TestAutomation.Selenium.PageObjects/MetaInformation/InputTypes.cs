@@ -1,6 +1,6 @@
 ﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation
 {
-    internal enum InputTypes
+    public enum InputTypes
     {
         Button,
         Checkbox,

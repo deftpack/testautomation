@@ -17,12 +17,12 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
             { Comparison.EndsWith, "$="}
         };
 
-        internal SelectorBuilder(string tagName)
+        public SelectorBuilder(string tagName)
         {
             _builder = new StringBuilder(tagName);
         }
 
-        internal SelectorBuilder(InputTypes type)
+        public SelectorBuilder(InputTypes type)
         {
             _builder = new StringBuilder("input");
             WithHtmlAttribute("type", type.ToString().ToLower());
@@ -61,19 +61,19 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
 
         public ISelectorBuilder ChildOf(ISelectorBuilder selectorBuilder)
         {
-            _builder.Insert(0, string.Format("{0} ", selectorBuilder.Selector));
+            _builder.Insert(0, string.Format("{0} ", selectorBuilder.Build()));
             return this;
         }
 
         public ISelectorBuilder HasChild(ISelectorBuilder selectorBuilder)
         {
-            _builder.AppendFormat(":has({0})", selectorBuilder.Selector);
+            _builder.AppendFormat(":has({0})", selectorBuilder.Build());
             return this;
         }
 
         public ISelectorBuilder Not(ISelectorBuilder selectorBuilder)
         {
-            _builder.AppendFormat(":not({0})", selectorBuilder.Selector);
+            _builder.AppendFormat(":not({0})", selectorBuilder.Build());
             return this;
         }
 
@@ -137,9 +137,9 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
             return this;
         }
 
-        public string Selector
+        public string Build()
         {
-            get { return _builder.ToString(); }
+            return _builder.ToString();
         }
     }
 }

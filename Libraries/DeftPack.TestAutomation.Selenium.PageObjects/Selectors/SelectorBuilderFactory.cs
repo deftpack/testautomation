@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
 {
-    internal class SelectorBuilderFactory
+    public class SelectorBuilderFactory
     {
         public IEnumerable<ISelectorBuilder> Create<TElement>() where TElement : Element
         {
