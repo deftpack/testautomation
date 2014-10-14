@@ -25,14 +25,14 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
 
         protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
         {
-            return _elementFactory.Create<TElement>(_webDriver.jQueryElement(builderFunc().Selector));
+            return _elementFactory.Create<TElement>(_webDriver.jQueryElement(builderFunc().Build()));
         }
 
         protected TElement QueryElement<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc)
             where TElement : Element
         {
             var selector = string.Join(", ",
-                _selectorBuilderFactory.Create<TElement>(builderFunc).Select(x => x.Selector));
+                _selectorBuilderFactory.Create<TElement>(builderFunc).Select(x => x.Build()));
             return _elementFactory.Create<TElement>(_webDriver.jQueryElement(selector));
         }
     }

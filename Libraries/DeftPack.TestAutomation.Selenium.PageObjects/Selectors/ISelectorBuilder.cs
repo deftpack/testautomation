@@ -19,6 +19,6 @@
         ISelectorBuilder InSequence(int th);
         ISelectorBuilder Selected();
         ISelectorBuilder GotFocus();
-        string Selector { get; }
+        string Build();
     }
 }
