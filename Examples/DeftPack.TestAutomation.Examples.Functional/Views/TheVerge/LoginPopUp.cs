@@ -10,28 +10,28 @@ namespace DeftPack.TestAutomation.Examples.Functional.Views.TheVerge
     {
         public TextBox UserNameInput
         {
-            get { return QueryElement<TextBox>(x => x.WithHtmlAttribute("name", "username")); }
+            get { return Query<TextBox>(x => x.WithHtmlAttribute("name", "username")); }
         }
         public TextBox PasswordInput
         {
-            get { return QueryElement<TextBox>(x => x.WithHtmlAttribute("name", "password")); }
+            get { return Query<TextBox>(x => x.WithHtmlAttribute("name", "password")); }
         }
         public CheckBox RememberMe
         {
-            get { return QueryElement<CheckBox>(x => x.WithId("remember_me")); }
+            get { return Query<CheckBox>(x => x.WithId("remember_me")); }
         }
         public Button LogInButton
         {
-            get { return QueryElement<Button>(x => x.WithHtmlAttribute("value", "Log in")); }
+            get { return Query<Button>(x => x.WithHtmlAttribute("value", "Log in")); }
         }
         public Link RegisterLink
         {
-            get { return QueryElement<Link>(x => x.WithHtmlAttribute("data-chorus-auth-goto", "register")); }
+            get { return Query<Link>(x => x.WithHtmlAttribute("data-chorus-auth-goto", "register")); }
         }
         [DynamicElement]
         public Label LoginErrorMessage
         {
-            get { return QueryElement<Label>(x => x.WithCssClass("error").ChildOf(Any.WithId("chorus-auth-password"))); }
+            get { return Query<Label>(x => x.WithCssClass("error").ChildOf(Any.WithId("chorus-auth-password"))); }
         }
     }
 }

@@ -18,17 +18,17 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Views
             get { return SelectorBuilder.Any; }
         }
 
-        protected ISelectorBuilder Element(string tagName)
+        protected ISelectorBuilder Tag(string tagName)
         {
             return new SelectorBuilder(tagName);
         }
 
-        protected TElement QueryElement<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
+        protected TElement Query<TElement>(Func<ISelectorBuilder> builderFunc) where TElement : Element
         {
             return _elementFactory.Create<TElement>(_webDriver.jQueryElement(builderFunc().Build()));
         }
 
-        protected TElement QueryElement<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc)
+        protected TElement Query<TElement>(Func<ISelectorBuilder, ISelectorBuilder> builderFunc)
             where TElement : Element
         {
             var selector = string.Join(", ",

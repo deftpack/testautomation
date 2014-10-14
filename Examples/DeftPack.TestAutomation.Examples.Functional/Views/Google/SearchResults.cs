@@ -1,5 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
 using DeftPack.TestAutomation.Selenium.PageObjects.Views;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.Google
@@ -9,7 +8,7 @@ namespace DeftPack.TestAutomation.Examples.Functional.Views.Google
     {
         public Link FirstResult
         {
-            get { return QueryElement<Link>(x => x.First().ChildOf(Element("li").WithCssClass("g").First())); }
+            get { return Query<Link>(x => x.First().ChildOf(Tag("li").WithCssClass("g").First())); }
         }
     }
 }
