@@ -44,7 +44,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Reporting.UnitTests", "UnitTests\DeftPack.TestAutomation.Reporting.UnitTests\DeftPack.TestAutomation.Reporting.UnitTests.csproj", "{4A4CC689-9D8A-447C-B592-0CABD1692DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects.UnitTests", "DeftPack.TestAutomation.Selenium.PageObjects.UnitTests\DeftPack.TestAutomation.Selenium.PageObjects.UnitTests.csproj", "{6D16B18C-7BD6-4568-8A02-AF322228467E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeftPack.TestAutomation.Selenium.PageObjects.UnitTests", "UnitTests\DeftPack.TestAutomation.Selenium.PageObjects.UnitTests\DeftPack.TestAutomation.Selenium.PageObjects.UnitTests.csproj", "{6D16B18C-7BD6-4568-8A02-AF322228467E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

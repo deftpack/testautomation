@@ -74,7 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Libraries\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
+    <ProjectReference Include="..\..\Libraries\DeftPack.TestAutomation.Selenium.PageObjects\DeftPack.TestAutomation.Selenium.PageObjects.csproj">
       <Project>{f4a3e8fb-765a-4117-a55a-8b980961447d}</Project>
       <Name>DeftPack.TestAutomation.Selenium.PageObjects</Name>
     </ProjectReference>
