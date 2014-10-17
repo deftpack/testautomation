@@ -69,7 +69,6 @@
     <Compile Include="Factories\WebElementMockFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectorBuilderTests.cs" />
-    <Compile Include="ViewTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

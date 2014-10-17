@@ -1,14 +1,15 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
-using DeftPack.TestAutomation.Selenium.PageObjects.Views;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects;
+using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
+using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.Google
 {
-    [CheckViewUrl("google", "q=")]
+    [CheckUrl("google", "q=")]
     public class SearchResults : View
     {
         public Link FirstResult
         {
-            get { return Query<Link>(x => x.First().ChildOf(Tag("li").WithCssClass("g").First())); }
+            get { return Elements.Query<Link>(x => x.First().ChildOf(Elements.Tag("li").WithCssClass("g").First())); }
         }
     }
 }

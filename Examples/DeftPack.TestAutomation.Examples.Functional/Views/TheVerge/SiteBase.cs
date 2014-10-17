@@ -1,14 +1,15 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
-using DeftPack.TestAutomation.Selenium.PageObjects.Views;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects;
+using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
+using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.TheVerge
 {
-    [CheckViewUrl("theverge.com")]
+    [CheckUrl("theverge.com")]
     public class SiteBase : View
     {
         public Link UserLink
         {
-            get { return Query<Link>(x => x.WithHtmlAttribute("data-chorus-auth", "login")); }
+            get { return Elements.Query<Link>(x => x.WithHtmlAttribute("data-chorus-auth", "login")); }
         }
     }
 }

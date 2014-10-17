@@ -1,4 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Views;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;

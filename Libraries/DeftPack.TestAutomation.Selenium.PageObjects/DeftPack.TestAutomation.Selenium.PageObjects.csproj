@@ -55,6 +55,7 @@
     <Compile Include="Elements\Capabilities\ITextual.cs" />
     <Compile Include="Elements\Capabilities\IUploader.cs" />
     <Compile Include="Elements\IElementFactory.cs" />
+    <Compile Include="Elements\IElementProvider.cs" />
     <Compile Include="MetaInformation\DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />
@@ -77,14 +78,19 @@
     <Compile Include="Elements\Table\TableHeader.cs" />
     <Compile Include="Elements\Table\TableRow.cs" />
     <Compile Include="Elements\Table\Table.cs" />
-    <Compile Include="Views\CheckViewUrlAttribute.cs" />
+    <Compile Include="Selectors\ISelectorBuilderFactory.cs" />
+    <Compile Include="MetaInformation\CheckUrlAttribute.cs" />
     <Compile Include="Elements\ElementTypeFinder.cs" />
     <Compile Include="Elements\IElementTypeFinder.cs" />
     <Compile Include="MetaInformation\HtmlInputAttribute.cs" />
     <Compile Include="MetaInformation\HtmlTagAttribute.cs" />
     <Compile Include="Elements\IElement.cs" />
-    <Compile Include="Views\ElementProvider.cs" />
-    <Compile Include="Views\View.cs" />
+    <Compile Include="Elements\ElementProvider.cs" />
+    <Compile Include="ViewHelpers\IJavaScriptHandler.cs" />
+    <Compile Include="ViewHelpers\IUrlChecker.cs" />
+    <Compile Include="ViewHelpers\JavaScriptHandler.cs" />
+    <Compile Include="ViewHelpers\UrlChecker.cs" />
+    <Compile Include="View.cs" />
     <Compile Include="Selectors\Comparison.cs" />
     <Compile Include="Selectors\SelectorBuilder.cs" />
     <Compile Include="MetaInformation\InputTypes.cs" />
@@ -92,18 +98,17 @@
     <Compile Include="Selectors\ISelectorBuilder.cs" />
     <Compile Include="Selectors\SelectorBuilderFactory.cs" />
     <Compile Include="Selectors\StringExtension.cs" />
-    <Compile Include="Views\ViewBase.cs" />
-    <Compile Include="Views\ViewFactory.cs" />
-    <Compile Include="WebDriverExtensions\WebDriverErrorHandlingExtensions.cs" />
-    <Compile Include="WebDriverExtensions\WebDriverJavaScriptExtensions.cs" />
-    <Compile Include="WebDriverExtensions\WebDriverPageExtensions.cs" />
-    <Compile Include="WebDriverExtensions\WebDriverQueryExtensions.cs" />
+    <Compile Include="ViewFactory.cs" />
+    <Compile Include="ExecutorExtensions\ExecutorErrorHandlingExtensions.cs" />
+    <Compile Include="ExecutorExtensions\ExecutorJavaScriptExtensions.cs" />
+    <Compile Include="ExecutorExtensions\ExecutorPageExtensions.cs" />
+    <Compile Include="ExecutorExtensions\ExecutorQueryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="WebDriverExtensions\ClientSideHelpers\jQueryLoader.js" />
+    <EmbeddedResource Include="ExecutorExtensions\ClientSideHelpers\jQueryLoader.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="WebDriverExtensions\ClientSideHelpers\ErrorHarvester.js" />
+    <EmbeddedResource Include="ExecutorExtensions\ClientSideHelpers\ErrorHarvester.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
