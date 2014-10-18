@@ -4,6 +4,9 @@ using DeftPack.TestAutomation.Reporting.Templating;
 
 namespace DeftPack.TestAutomation.Functional.DependencyInjection
 {
+    /// <summary>
+    /// Module to register all the reporting related types in the IoC (AutoFac container)
+    /// </summary>
     public class ReportingModule : Module
     {
         protected override void Load(ContainerBuilder builder)
@@ -14,7 +17,7 @@ namespace DeftPack.TestAutomation.Functional.DependencyInjection
                 .As<IReportSaver>()
                 .InstancePerDependency();
             builder.Register(x => ReporterConfiguration.Config).SingleInstance();
-            
+
             builder.Register((x, p) =>
             {
                 var setting = x.Resolve<ReporterSetting>();

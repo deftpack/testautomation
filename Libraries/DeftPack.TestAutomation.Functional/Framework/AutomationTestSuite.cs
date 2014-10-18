@@ -9,6 +9,9 @@ using System.Reflection;
 
 namespace DeftPack.TestAutomation.Functional.Framework
 {
+    /// <summary>
+    /// Base class for the test classes which uses the functional framework
+    /// </summary>
     public abstract class AutomationTestSuite
     {
         private ILifetimeScope _scope;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.IO;
 
 namespace DeftPack.TestAutomation.Reporting
 {
@@ -24,7 +25,9 @@ namespace DeftPack.TestAutomation.Reporting
             get
             {
                 var location = (string)this["location"];
-                return string.IsNullOrWhiteSpace(location) ? AppDomain.CurrentDomain.BaseDirectory : location;
+                return string.IsNullOrWhiteSpace(location)
+                    ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "reports")
+                    : location;
             }
             set { this["location"] = value; }
         }

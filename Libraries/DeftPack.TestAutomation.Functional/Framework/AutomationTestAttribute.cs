@@ -3,6 +3,9 @@ using System;
 
 namespace DeftPack.TestAutomation.Functional.Framework
 {
+    /// <summary>
+    /// Basic information about the test itself. Extending the NUnit Test attribute with description.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
     public class AutomationTestAttribute : TestAttribute, ITestSummary
     {
