@@ -4,30 +4,34 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
 {
     public class TestEvaluator : ITestEvaluator
     {
+        private readonly ITestActionDescriptionProvider _testActionDescriptionProvider;
         private readonly ITestReporter _testReporter;
 
-        public TestEvaluator(ITestReporter testReporter)
+        public TestEvaluator(
+            ITestActionDescriptionProvider testActionDescriptionProvider,
+            ITestReporter testReporter)
         {
+            _testActionDescriptionProvider = testActionDescriptionProvider;
             _testReporter = testReporter;
         }
 
-        public void Evaluate<T>(T evaluable) where T : TestAction
+        public void Evaluate<TAction>(TAction testAction) where TAction : TestAction
         {
             try
             {
-                evaluable.Evaluate();
-                Report<T>(true, evaluable.ExtraMessage);
+                testAction.Evaluate();
+                Report<TAction>(true, testAction.ExtraMessage);
             }
             catch (Exception e)
             {
-                Report<T>(false, e.Message);
+                Report<TAction>(false, e.Message);
                 throw;
             }
         }
 
-        private void Report<T>(bool isSuccess, string extraMessage)
+        private void Report<TAction>(bool isSuccess, string extraMessage) where TAction : TestAction
         {
-            var description = GetDescription<T>();
+            var description = _testActionDescriptionProvider.GetDescription<TAction>();
             var message = isSuccess ? description.SuccessMessage : description.FailedMessage;
             if (extraMessage != null) message = string.Format(message, extraMessage);
 
@@ -36,21 +40,6 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
                     description.ExpectedResult,
                     message,
                     isSuccess);
-        }
-
-        private ITestActionDescription GetDescription<T>()
-        {
-            var targetType = typeof(T);
-            var attributeType = typeof(TestActionDescriptionAttribute);
-
-            var description = (TestActionDescriptionAttribute)Attribute.GetCustomAttribute(targetType, attributeType);
-
-
-            if (description == null)
-                throw new MissingExpectedAttributeException(targetType, attributeType);
-
-
-            return description;
         }
     }
 }

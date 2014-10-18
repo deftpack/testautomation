@@ -20,6 +20,7 @@ namespace DeftPack.TestAutomation.Functional.DependencyInjection
             builder.Register(x => DateTime.Now).SingleInstance();
             builder.Register(x => WebDriverConfiguration.Config).SingleInstance();
             builder.Register(x => x.Resolve<WebDriverFactory>().Default).InstancePerLifetimeScope();
+            builder.RegisterType<TestActionDescriptionProvider>().As<ITestActionDescriptionProvider>().SingleInstance();
 
             Container = builder.Build();
         }

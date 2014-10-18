@@ -56,6 +56,7 @@
     <Compile Include="Elements\Capabilities\IUploader.cs" />
     <Compile Include="Elements\IElementFactory.cs" />
     <Compile Include="Elements\IElementProvider.cs" />
+    <Compile Include="IViewFactory.cs" />
     <Compile Include="MetaInformation\DynamicElementAttribute.cs" />
     <Compile Include="Elements\Activators\Button.cs" />
     <Compile Include="Elements\Activators\Link.cs" />

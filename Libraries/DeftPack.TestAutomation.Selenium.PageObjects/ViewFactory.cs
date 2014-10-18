@@ -6,8 +6,13 @@ using System;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects
 {
-    public class ViewFactory
+    public class ViewFactory : IViewFactory
     {
+        public TView Create<TView>(IWebDriver webDriver) where TView : View
+        {
+            return (TView)Create(typeof(TView), webDriver);
+        }
+
         public object Create(Type viewType, IWebDriver webDriver)
         {
             var view = Activator.CreateInstance(viewType);

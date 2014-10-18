@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInjection\ReportingModule.cs" />
+    <Compile Include="Evaluation\ITestActionDescriptionProvider.cs" />
+    <Compile Include="Evaluation\TestActionDescriptionProvider.cs" />
     <Compile Include="Evaluation\TestActionFactory.cs" />
     <Compile Include="Evaluation\TestFunction.cs" />
     <Compile Include="Framework\AutomationTestSuite.cs" />

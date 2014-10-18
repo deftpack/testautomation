@@ -51,7 +51,7 @@ namespace DeftPack.TestAutomation.Functional.Framework
         {
             _scope = TestFramework.Container.BeginLifetimeScope();
             ScreenshotSaver = new TestScreenshotSaver(
-                _scope.Resolve<IWebDriver>(), 
+                _scope.Resolve<IWebDriver>(),
                 _scope.Resolve<ReporterSetting>().RootFolderFullPath);
             TestReporter.Finished += IndexReporter.HandleFinishedTestReport;
             TestReporter.Finished += ScreenshotSaver.HandleFinishedTestReport;
@@ -66,10 +66,10 @@ namespace DeftPack.TestAutomation.Functional.Framework
 
         protected void StartAtUrl(string url)
         {
-             _scope.Resolve<IWebDriver>().NavigateToUrl(url);
+            _scope.Resolve<IWebDriver>().NavigateToUrl(url);
         }
 
-        protected IWebDriver GetExtraWebDriver()
+        protected IWebDriver OpenNewBrowser()
         {
             return TestFramework.Container.Resolve<WebDriverFactory>().Default;
         }
