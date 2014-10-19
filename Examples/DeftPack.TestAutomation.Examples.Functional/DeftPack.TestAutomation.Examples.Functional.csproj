@@ -71,6 +71,9 @@
     <Compile Include="Actions\Google\Search.cs" />
     <Compile Include="Actions\TheVerge\FailToRegister.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Views\BBC\Weather.cs" />
+    <Compile Include="Views\BBC\WeatherDetails.cs" />
+    <Compile Include="Views\BBC\Welcome.cs" />
     <Compile Include="Views\Google\SearchResults.cs" />
     <Compile Include="Views\Google\Welcome.cs" />
     <Compile Include="Views\TheVerge\LoginPopUp.cs" />
@@ -112,6 +115,13 @@
       <Project>{ce59c824-c745-4681-9700-809eaeb97d99}</Project>
       <Name>DeftPack.TestAutomation</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Actions\BBC\" />
+    <Folder Include="Actions\IMDB\" />
+    <Folder Include="Actions\jQuery\" />
+    <Folder Include="Views\IMDB\" />
+    <Folder Include="Views\jQuery\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
