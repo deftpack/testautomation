@@ -1,5 +1,5 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
+using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
 using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.Google

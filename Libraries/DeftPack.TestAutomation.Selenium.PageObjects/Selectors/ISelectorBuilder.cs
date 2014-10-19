@@ -16,7 +16,7 @@
         ISelectorBuilder Disabled();
         ISelectorBuilder First();
         ISelectorBuilder Last();
-        ISelectorBuilder InSequence(int th);
+        ISelectorBuilder InSequence(int index);
         ISelectorBuilder Selected();
         ISelectorBuilder GotFocus();
         string Build();

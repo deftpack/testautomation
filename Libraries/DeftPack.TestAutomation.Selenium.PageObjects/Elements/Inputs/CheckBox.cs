@@ -1,8 +1,11 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: input [checkbox]
+    /// </summary>
     [HtmlInput(InputTypes.Checkbox)]
     public class CheckBox : Element
     {

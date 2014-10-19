@@ -1,9 +1,11 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: button and input [button, reset, submit, image]
+    /// </summary>
     [HtmlTag("button")]
     [HtmlInput(InputTypes.Button)]
     [HtmlInput(InputTypes.Reset)]

@@ -2,6 +2,9 @@
 
 namespace DeftPack.TestAutomation.Functional.Evaluation
 {
+    /// <summary>
+    /// This class helps to retrieve the test action meta information
+    /// </summary>
     public class TestActionDescriptionProvider : ITestActionDescriptionProvider
     {
         private readonly Type _attributeType;
@@ -11,6 +14,11 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
             _attributeType = typeof(TestActionDescriptionAttribute);
         }
 
+        /// <summary>
+        /// Finds the test description for a given test action or function
+        /// </summary>
+        /// <typeparam name="TAction">Type of the test action or function to be inspected</typeparam>
+        /// <returns>Test action/function description</returns>
         public ITestActionDescription GetDescription<TAction>() where TAction : TestAction
         {
             var targetType = typeof(TAction);

@@ -1,5 +1,8 @@
 ﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation
 {
+    /// <summary>
+    /// Supported HTML input types
+    /// </summary>
     public enum InputTypes
     {
         Button,

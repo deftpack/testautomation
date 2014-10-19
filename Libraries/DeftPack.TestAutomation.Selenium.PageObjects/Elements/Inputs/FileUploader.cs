@@ -1,9 +1,11 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: input [file]
+    /// </summary>
     [HtmlInput(InputTypes.File)]
     public class FileUploader : Element, IUploader
     {

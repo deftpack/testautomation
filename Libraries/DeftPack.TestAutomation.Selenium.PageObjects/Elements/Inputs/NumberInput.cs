@@ -2,8 +2,11 @@
 using OpenQA.Selenium;
 using System;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: input [number, range, date, week, month, time, datetime]
+    /// </summary>
     [HtmlInput(InputTypes.Number)]
     [HtmlInput(InputTypes.Range)]
     [HtmlInput(InputTypes.Date)]

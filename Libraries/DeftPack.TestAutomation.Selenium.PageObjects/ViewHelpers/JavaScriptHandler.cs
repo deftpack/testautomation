@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.ViewHelpers
 {
+    /// <summary>
+    /// This class manages the JavaScript related operations 
+    /// </summary>
     public class JavaScriptHandler : IJavaScriptHandler
     {
         private readonly IJavaScriptExecutor _executor;
@@ -16,11 +19,17 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.ViewHelpers
             _executor.InitilaizeJavaScriptErrorHarvester();
         }
 
+        /// <summary>
+        /// All the errors on the page
+        /// </summary>
         public IEnumerable<string> ErrorMessages
         {
             get { return _executor.GetJavaScriptErrorMessages().ToArray(); }
         }
 
+        /// <summary>
+        /// Readiness of the page
+        /// </summary>
         public bool IsPageReady
         {
             get { return _executor.IsPageReady(); }

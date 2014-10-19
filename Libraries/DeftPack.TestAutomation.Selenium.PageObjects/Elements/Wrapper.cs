@@ -1,5 +1,4 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Linq;
 

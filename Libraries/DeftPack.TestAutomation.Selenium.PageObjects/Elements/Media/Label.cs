@@ -1,9 +1,11 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: p, h1, h2, h3, h4, h5, h6, span, label and input [hidden]
+    /// </summary>
     [HtmlTag("p")]
     [HtmlTag("h1")]
     [HtmlTag("h2")]

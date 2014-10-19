@@ -2,8 +2,11 @@
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Containers
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: frame, iframe
+    /// </summary>
     [HtmlTag("iframe")]
     [HtmlTag("frame")]
     public class Frame : Wrapper

@@ -1,8 +1,11 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: table
+    /// </summary>
     [HtmlTag("table")]
     public class Table : Element
     {
@@ -16,6 +19,6 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
 
         public TableHeader Header { get; private set; }
         public TableBody Body { get; private set; }
-        public TableFooter Footer{ get; private set; }
+        public TableFooter Footer { get; private set; }
     }
 }

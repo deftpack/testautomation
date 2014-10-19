@@ -1,9 +1,11 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: textarea and input [url, text, search, password, email]
+    /// </summary>
     [HtmlTag("textarea")]
     [HtmlInput(InputTypes.Url)]
     [HtmlInput(InputTypes.Text)]

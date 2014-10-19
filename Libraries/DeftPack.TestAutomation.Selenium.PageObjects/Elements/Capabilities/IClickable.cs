@@ -1,4 +1,4 @@
-﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities
+﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
     public interface IClickable : IElement
     {

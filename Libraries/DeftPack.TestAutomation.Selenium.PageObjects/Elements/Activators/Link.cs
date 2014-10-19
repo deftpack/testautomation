@@ -1,10 +1,12 @@
-﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Capabilities;
-using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
+﻿using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: a
+    /// </summary>
     [HtmlTag("a")]
     public class Link : Wrapper, IClickable, ITextual
     {

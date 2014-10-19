@@ -1,5 +1,8 @@
 ﻿namespace DeftPack.TestAutomation.Reporting.Models
 {
+    /// <summary>
+    /// Test Summary for Test Suite Report
+    /// </summary>
     public class TestSummary
     {
         public int Number { get; set; }

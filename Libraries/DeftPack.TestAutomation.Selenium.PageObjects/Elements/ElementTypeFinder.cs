@@ -7,6 +7,9 @@ using System.Reflection;
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// This class helps to look-up element types
+    /// </summary>
     public class ElementTypeFinder : IElementTypeFinder
     {
         public static readonly IEnumerable<Type> ElementTypes;
@@ -17,6 +20,11 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
                         .SelectMany(asm => asm.GetTypes().Where(t => t.IsSubclassOf(typeof(Element))));
         }
 
+        /// <summary>
+        /// Find a matching element type for a web element
+        /// </summary>
+        /// <param name="webElement">Web element to inspect</param>
+        /// <returns>Element Type</returns>
         public Type Find(IWebElement webElement)
         {
             return ElementTypes.FirstOrDefault(t =>

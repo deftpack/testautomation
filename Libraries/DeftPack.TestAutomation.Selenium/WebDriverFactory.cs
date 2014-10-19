@@ -7,10 +7,18 @@ using OpenQA.Selenium.Safari;
 
 namespace DeftPack.TestAutomation.Selenium
 {
+    /// <summary>
+    /// Factory class for Selenium Web Drivers
+    /// </summary>
     public class WebDriverFactory
     {
         private readonly WebDriverConfiguration _configuration = WebDriverConfiguration.Config;
 
+        /// <summary>
+        /// Creating a new web driver instance
+        /// </summary>
+        /// <param name="browser">What browser should be used</param>
+        /// <returns>Web Driver</returns>
         public IWebDriver Create(Browser browser)
         {
             var driverLocation = _configuration.DriverLocation;
@@ -80,6 +88,9 @@ namespace DeftPack.TestAutomation.Selenium
             throw new WebDriverNotFoundException(browser.ToString());
         }
 
+        /// <summary>
+        /// Returns a web driver instance with the default browser
+        /// </summary>
         public IWebDriver Default
         {
             get { return Create(_configuration.DefaultBrowser); }

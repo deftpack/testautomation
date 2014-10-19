@@ -11,6 +11,7 @@ namespace DeftPack.TestAutomation.Assertion
 
         /// <summary>
         /// How many times the asserter should try before it gives up
+        /// Default value: 10 times
         /// </summary>
         [ConfigurationProperty("numberOfTries", IsRequired = false, DefaultValue = 10)]
         public int NumberOfTries
@@ -21,6 +22,7 @@ namespace DeftPack.TestAutomation.Assertion
 
         /// <summary>
         /// How much the asserter should wait between the tries
+        /// Default value: 500ms
         /// </summary>
         [ConfigurationProperty("millisecondsBetweenTries", IsRequired = false, DefaultValue = 500)]
         public int MillisecondsBetweenTries
@@ -30,7 +32,7 @@ namespace DeftPack.TestAutomation.Assertion
         }
 
         /// <summary>
-        /// Reading the section from the application or web configuration file
+        /// Get the section from the application or web configuration file
         /// </summary>
         public static PatientAssertionConfiguration Config
         {

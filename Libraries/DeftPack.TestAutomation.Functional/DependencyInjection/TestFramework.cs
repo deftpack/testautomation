@@ -7,7 +7,7 @@ using System;
 namespace DeftPack.TestAutomation.Functional.DependencyInjection
 {
     /// <summary>
-    /// Setting up and exposing the IoC for internal dependency injection.
+    /// Setting up and exposing the IoC container for internal dependency injection.
     /// </summary>
     public static class TestFramework
     {

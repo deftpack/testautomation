@@ -2,8 +2,11 @@
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: td, th
+    /// </summary>
     [HtmlTag("td")]
     [HtmlTag("th")]
     public class TableCell : Wrapper

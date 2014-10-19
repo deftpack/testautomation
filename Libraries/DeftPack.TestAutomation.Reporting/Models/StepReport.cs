@@ -1,5 +1,8 @@
 ﻿namespace DeftPack.TestAutomation.Reporting.Models
 {
+    /// <summary>
+    /// Test Step Report Model
+    /// </summary>
     public class StepReport
     {
         public int StepNumber { get; set; }

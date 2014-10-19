@@ -2,8 +2,11 @@
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Table
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: thead
+    /// </summary>
     [HtmlTag("thead")]
     public class TableHeader : Element
     {

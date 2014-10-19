@@ -1,8 +1,4 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Containers;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media;
 using DeftPack.TestAutomation.Selenium.PageObjects.UnitTests.Factories;
 using NUnit.Framework;
 using System;

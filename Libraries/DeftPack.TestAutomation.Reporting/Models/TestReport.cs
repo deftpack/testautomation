@@ -1,5 +1,8 @@
 ﻿namespace DeftPack.TestAutomation.Reporting.Models
 {
+    /// <summary>
+    /// Test Report Model
+    /// </summary>
     public class TestReport
     {
         public string Title { get; set; }

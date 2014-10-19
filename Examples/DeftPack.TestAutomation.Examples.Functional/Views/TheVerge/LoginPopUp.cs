@@ -1,7 +1,5 @@
 ﻿using DeftPack.TestAutomation.Selenium.PageObjects;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Activators;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Inputs;
-using DeftPack.TestAutomation.Selenium.PageObjects.Elements.Media;
+using DeftPack.TestAutomation.Selenium.PageObjects.Elements;
 using DeftPack.TestAutomation.Selenium.PageObjects.MetaInformation;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Views.TheVerge

@@ -2,8 +2,11 @@
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements.Containers
+namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
+    /// <summary>
+    /// HTML: form
+    /// </summary>
     [HtmlTag("form")]
     public class Form : Wrapper
     {

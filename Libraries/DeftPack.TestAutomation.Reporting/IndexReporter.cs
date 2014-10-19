@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace DeftPack.TestAutomation.Reporting
 {
+    /// <summary>
+    /// Reporter for the test suites. It generates summary about the whole test run.
+    /// </summary>
     public class IndexReporter : IIndexReporter
     {
         private const string IndexFileName = "index";
@@ -30,6 +33,11 @@ namespace DeftPack.TestAutomation.Reporting
             };
         }
 
+        /// <summary>
+        /// Add a record about a test execution once it is finished
+        /// </summary>
+        /// <param name="t">Event Raiser</param>
+        /// <param name="args">Event Arguments</param>
         public void HandleFinishedTestReport(ITestReporter t, TestReporterFinishedEventArgs args)
         {
             _testSummaries.Enqueue(new TestSummary
