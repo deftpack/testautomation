@@ -207,7 +207,7 @@ namespace DeftPack.TestAutomation.Selenium.PageObjects.Selectors
         }
 
         /// <summary>
-        /// Add expression to select the element at index n within the matched set
+        /// Add expression to select the element at (zero-based) index n within the matched set
         /// http://api.jquery.com/eq-selector/
         /// </summary>
         /// <param name="index">The index of the element</param>

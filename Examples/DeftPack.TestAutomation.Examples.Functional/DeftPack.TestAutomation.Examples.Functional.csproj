@@ -67,10 +67,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Actions\BBC\ReadTodaysSunriseAndSunset.cs" />
     <Compile Include="Actions\Google\GoToFirst.cs" />
     <Compile Include="Actions\Google\Search.cs" />
     <Compile Include="Actions\TheVerge\FailToRegister.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Tests\CheckWeatherDetailsAtBBC.cs" />
     <Compile Include="Views\BBC\Weather.cs" />
     <Compile Include="Views\BBC\WeatherDetails.cs" />
     <Compile Include="Views\BBC\Welcome.cs" />
@@ -80,7 +82,7 @@
     <Compile Include="Views\TheVerge\RegisterPopUp.cs" />
     <Compile Include="Views\TheVerge\SiteBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\ComeFromGoogleAndRegister.cs" />
+    <Compile Include="Tests\ComeFromGoogleAndRegisterAtTheVerge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -117,7 +119,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Actions\BBC\" />
     <Folder Include="Actions\IMDB\" />
     <Folder Include="Actions\jQuery\" />
     <Folder Include="Views\IMDB\" />

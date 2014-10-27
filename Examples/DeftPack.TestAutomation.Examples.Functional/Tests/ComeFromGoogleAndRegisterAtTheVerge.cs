@@ -5,7 +5,7 @@ using DeftPack.TestAutomation.Functional.Framework;
 
 namespace DeftPack.TestAutomation.Examples.Functional.Tests
 {
-    public class ComeFromGoogleAndRegister : AutomationTestSuite
+    public class ComeFromGoogleAndRegisterAtTheVerge : AutomationTestSuite
     {
         [AutomationTest("Fail To Register", "Test register user journey coming from Google")]
         public void FailToRegister()

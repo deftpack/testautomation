@@ -6,7 +6,7 @@ using DeftPack.TestAutomation.Functional.Evaluation;
 namespace DeftPack.TestAutomation.Examples.Functional.Actions.Google
 {
     [TestActionDescription(
-        ActionSummary = "Get from Goggle's search result page to first result's page",
+        ActionSummary = "Get from Goggle's search result page to the first result's page",
         ExpectedResult = "Successfully redirected to the external page",
         SuccessMessage = "Clicking on the '{0}' link redirect was successful")]
     public class GoToFirst : TestAction
