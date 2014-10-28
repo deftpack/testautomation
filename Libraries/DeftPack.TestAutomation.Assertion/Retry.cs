@@ -8,7 +8,7 @@ namespace DeftPack.TestAutomation.Assertion
     /// or server but it is not warmed-up yet, and the connection times out,
     /// this class will try to re-open and omit exceptions in a grace period.   
     /// </summary>
-    public class Retry
+    internal class Retry
     {
         private readonly IWaitProvider _waitProvider;
 

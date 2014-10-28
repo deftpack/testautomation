@@ -15,6 +15,11 @@ namespace DeftPack.TestAutomation.Functional.Framework
         /// </summary>
         public string Name { get; private set; }
 
+        /// <summary>
+        /// Marking test as automated functional test
+        /// </summary>
+        /// <param name="name">Name of the test</param>
+        /// <param name="description">Short description of the test</param>
         public AutomationTestAttribute(string name, string description)
         {
             Name = name;

@@ -8,7 +8,7 @@ using System.Reflection;
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
     /// <summary>
-    /// This class helps to look-up element types
+    /// Looks up element types
     /// </summary>
     public class ElementTypeFinder : IElementTypeFinder
     {

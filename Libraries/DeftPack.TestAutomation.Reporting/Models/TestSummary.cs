@@ -3,7 +3,7 @@
     /// <summary>
     /// Test Summary for Test Suite Report
     /// </summary>
-    public class TestSummary
+    internal class TestSummary
     {
         public int Number { get; set; }
         public string Name { get; set; }

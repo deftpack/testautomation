@@ -3,7 +3,7 @@
     /// <summary>
     /// Test Report Model
     /// </summary>
-    public class TestReport
+    internal class TestReport
     {
         public string Title { get; set; }
         public string TestCaseName { get; set; }

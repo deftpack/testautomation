@@ -1,6 +1,6 @@
 ﻿namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
-    public interface IClickable : IElement
+    internal interface IClickable : IElement
     {
         void Click();
     }

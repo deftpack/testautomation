@@ -7,9 +7,9 @@ using System.Reflection;
 namespace DeftPack.TestAutomation.Selenium.PageObjects.ViewHelpers
 {
     /// <summary>
-    /// This class serves the URL related checks
+    /// URL related checks
     /// </summary>
-    public class UrlChecker : IUrlChecker
+    internal class UrlChecker : IUrlChecker
     {
         private readonly IWebDriver _webDriver;
 

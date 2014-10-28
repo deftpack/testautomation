@@ -5,7 +5,7 @@ namespace DeftPack.TestAutomation.Functional.Evaluation
     /// <summary>
     /// Executes test actions or functions and calls the reporter upon completion
     /// </summary>
-    public class TestEvaluator : ITestEvaluator
+    internal class TestEvaluator : ITestEvaluator
     {
         private readonly ITestActionDescriptionProvider _testActionDescriptionProvider;
         private readonly ITestReporter _testReporter;

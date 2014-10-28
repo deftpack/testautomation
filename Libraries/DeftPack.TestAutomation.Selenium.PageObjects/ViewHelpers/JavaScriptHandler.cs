@@ -6,9 +6,9 @@ using System.Linq;
 namespace DeftPack.TestAutomation.Selenium.PageObjects.ViewHelpers
 {
     /// <summary>
-    /// This class manages the JavaScript related operations 
+    /// Manages the JavaScript related operations 
     /// </summary>
-    public class JavaScriptHandler : IJavaScriptHandler
+    internal class JavaScriptHandler : IJavaScriptHandler
     {
         private readonly IJavaScriptExecutor _executor;
 

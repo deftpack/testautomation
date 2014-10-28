@@ -2,7 +2,7 @@
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
-    public interface ISelectable : IElement
+    internal interface ISelectable : IElement
     {
         IEnumerable<string> Options { get; }
         string Value { get; set; }

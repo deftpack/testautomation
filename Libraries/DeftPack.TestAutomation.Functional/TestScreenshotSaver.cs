@@ -5,9 +5,9 @@ using System.IO;
 namespace DeftPack.TestAutomation.Functional
 {
     /// <summary>
-    /// Saves screenshot to the given location made on the actual screen by a Selenium Web Driver
+    /// Saves screenshot to the given location made on the active screen by a Selenium Web Driver
     /// </summary>
-    public class TestScreenshotSaver : ITestScreenshotSaver
+    internal class TestScreenshotSaver : ITestScreenshotSaver
     {
         public static string ScreenshotFolderName = "Screenshots";
         private readonly IWebDriver _webDriver;

@@ -4,7 +4,7 @@ using System.Threading;
 namespace DeftPack.TestAutomation.Assertion
 {
     /// <summary>
-    /// This class implements the internal waiting mechanism 
+    /// Waiting mechanism provider
     /// </summary>
     internal class WaitProvider : IWaitProvider
     {

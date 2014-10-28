@@ -9,7 +9,7 @@ namespace DeftPack.TestAutomation.Functional.DependencyInjection
     /// <summary>
     /// Setting up and exposing the IoC container for internal dependency injection.
     /// </summary>
-    public static class TestFramework
+    internal static class TestFramework
     {
         public static IContainer Container { get; private set; }
 

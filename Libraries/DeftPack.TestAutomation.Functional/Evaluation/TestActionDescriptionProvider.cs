@@ -3,9 +3,9 @@
 namespace DeftPack.TestAutomation.Functional.Evaluation
 {
     /// <summary>
-    /// This class helps to retrieve the test action meta information
+    /// Retrieves the test action meta information
     /// </summary>
-    public class TestActionDescriptionProvider : ITestActionDescriptionProvider
+    internal class TestActionDescriptionProvider : ITestActionDescriptionProvider
     {
         private readonly Type _attributeType;
 

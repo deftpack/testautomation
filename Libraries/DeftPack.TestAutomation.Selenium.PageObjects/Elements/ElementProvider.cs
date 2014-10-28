@@ -7,7 +7,7 @@ using System.Linq;
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
     /// <summary>
-    /// This class helps to get elements with the underlying client side helpers
+    /// Gets elements with the underlying client side helpers
     /// </summary>
     public class ElementProvider : IElementProvider
     {

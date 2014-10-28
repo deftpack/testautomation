@@ -7,7 +7,7 @@ namespace DeftPack.TestAutomation.Functional.DependencyInjection
     /// <summary>
     /// Module to register all the reporting related types in the IoC (AutoFac container)
     /// </summary>
-    public class ReportingModule : Module
+    internal class ReportingModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

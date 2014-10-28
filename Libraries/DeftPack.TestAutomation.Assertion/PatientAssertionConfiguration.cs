@@ -5,7 +5,7 @@ namespace DeftPack.TestAutomation.Assertion
     /// <summary>
     /// Configuration section for the patient asserter
     /// </summary>
-    public class PatientAssertionConfiguration : ConfigurationSection
+    internal class PatientAssertionConfiguration : ConfigurationSection
     {
         public const string SectionName = "PatientAssertionConfiguration";
 

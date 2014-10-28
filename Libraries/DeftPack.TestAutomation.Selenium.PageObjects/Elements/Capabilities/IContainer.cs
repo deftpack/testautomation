@@ -2,7 +2,7 @@
 
 namespace DeftPack.TestAutomation.Selenium.PageObjects.Elements
 {
-    public interface IContainer : IElement
+    internal interface IContainer : IElement
     {
         IEnumerable<IElement> ChildElements { get; }
     }

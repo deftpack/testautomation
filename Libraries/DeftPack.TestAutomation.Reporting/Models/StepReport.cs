@@ -3,7 +3,7 @@
     /// <summary>
     /// Test Step Report Model
     /// </summary>
-    public class StepReport
+    internal class StepReport
     {
         public int StepNumber { get; set; }
         public string StepName { get; set; }
