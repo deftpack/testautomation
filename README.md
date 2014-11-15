@@ -1,9 +1,9 @@
 Test Automation
 ===============
-
+[![Customer Feedback](http://img.shields.io/badge/feedback-here-yellow.svg)](https://deftpack.uservoice.com/)
 [![License](http://img.shields.io/badge/license-Apache 2-blue.svg)](https://raw.githubusercontent.com/deftpack/testautomation/master/LICENSE.txt)
-[![Stories in Ready](https://badge.waffle.io/deftpack/testautomation.png?label=ready&title=ready)](https://waffle.io/deftpack/testautomation)
-[![Join](http://img.shields.io/badge/slack-Join Here-green.svg)](https://deftpack.slack.com)
+[![Stories in Ready](https://badge.waffle.io/deftpack/testautomation.png?label=ready&title=tickets ready)](https://waffle.io/deftpack/testautomation)
+[![Join](http://img.shields.io/badge/slack-join here-green.svg)](https://deftpack.slack.com)
 [![Fund for more packages](http://img.shields.io/gittip/deftpack.svg)](https://gratipay.com/deftpack/)
 
 Project | Version 
